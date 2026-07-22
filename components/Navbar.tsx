@@ -12,8 +12,8 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { label: "Główna", href: "/" },
   { label: "O mnie", href: "/aboutme" },
-  { label: "Usługi", href: "#uslugi" },
-  { label: "Cennik", href: "#cennik" },
+  { label: "Usługi", href: "/offer" },
+  { label: "Cennik", href: "/prices" },
   { label: "Kontakt", href: "#kontakt" },
 ];
 
@@ -77,7 +77,7 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 font-jost ${
         isScrolled
-          ? "bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md shadow-sm border-b border-neutral-100 dark:border-neutral-800"
+          ? "bg-transparent backdrop-blur-md shadow-sm border-b border-neutral-100/10 dark:border-neutral-800/10"
           : "bg-transparent border-b border-transparent"
       }`}
     >

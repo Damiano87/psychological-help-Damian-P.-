@@ -82,7 +82,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex lg:grid lg:grid-cols-[1fr_2fr_1fr] justify-between items-center h-16 sm:h-20">
           {/* Logo / Brand */}
           <div className="shrink-0">
             <Link href="/" className="flex items-center gap-2 group">
@@ -109,7 +109,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex justify-center items-center gap-8">
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (

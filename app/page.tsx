@@ -88,7 +88,7 @@ export default function Home() {
             </a> */}
             <a
               href="/offer"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full text-base font-semibold text-white bg-white/10 hover:bg-white/20 active:bg-white/5 border border-white/20 backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-200"
+              className="inline-flex items-center justify-center px-4 py-2 sm:px-8 sm:py-3.5 rounded-full text-xs sm:text-base font-semibold text-white bg-white/10 hover:bg-white/20 active:bg-white/5 border border-white/20 backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-200"
             >
               Dowiedz się więcej
             </a>
@@ -185,7 +185,7 @@ export default function Home() {
           {/* Text content */}
           <div className="flex-1 max-w-xl">
             <div className="inline-block mb-6 relative">
-              <h2 className="text-3xl font-bold font-roboto">
+              <h2 className="text-2xl sm:text-3xl font-bold font-roboto">
                 Damian Piwowarczyk
               </h2>
               <motion.div
@@ -196,8 +196,8 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
               />
             </div>
-            <p className="text-lg leading-relaxed text-neutral-600 font-roboto">
-              <span className="float-left text-5xl leading-none pr-3 mt-1">
+            <p className="text-xs sm:text-lg leading-relaxed text-neutral-600 font-roboto">
+              <span className="float-left text-4xl sm:text-5xl leading-none pr-3 mt-1">
                 L
               </span>
               orem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
@@ -233,30 +233,6 @@ export default function Home() {
               className="opacity-40 dark:opacity-60 object-contain transition-transform duration-300 hover:scale-105"
             />
           </div>
-        </div>
-      </section>
-      {/* Register for therapy session */}
-      <section className="py-16 md:py-24 bg-teal-300">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 gap-12 md:gap-16">
-          <p className="font-roboto text-lg leading-relaxed text-neutral-700 uppercase">
-            - zapraszam do rejestracji
-          </p>
-          <h3 className="font-roboto text-2xl sm:text-6xl font-bold mt-12 mb-12">
-            Jeśli chcesz umówić się na spotkanie, zarejestruj się{" "}
-            <span className="relative inline-block px-2 whitespace-nowrap">
-              <span className="relative z-10 text-neutral-900">już teraz</span>
-              <motion.span
-                className="absolute inset-0 bg-yellow-400 block origin-left rounded-md z-0"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              />
-            </span>
-          </h3>
-          <button className="text-lg bg-teal-700 text-white hover:bg-teal-800 font-roboto px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-            Zarejestruj się
-          </button>
         </div>
       </section>
     </div>

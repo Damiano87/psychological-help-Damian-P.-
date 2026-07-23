@@ -143,7 +143,7 @@ export default function AboutMe() {
         </div>
       </section>
       {/* Register for therapy session */}
-      <section className="py-16 md:py-24 bg-teal-200">
+      {/* <section className="py-16 md:py-24 bg-teal-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 gap-12 md:gap-16">
           <p className="font-roboto text-lg leading-relaxed text-neutral-700 uppercase">
             - zapraszam do rejestracji
@@ -165,7 +165,7 @@ export default function AboutMe() {
             Zarejestruj się
           </button>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

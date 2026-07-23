@@ -130,14 +130,14 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop Call To Action */}
-          <div className="hidden lg:flex items-center">
+          {/* <div className="hidden lg:flex items-center">
             <Link
               href="#kontakt"
               className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-teal-600 hover:bg-teal-500 active:bg-teal-700 shadow-md shadow-teal-500/10 hover:shadow-lg hover:shadow-teal-500/20 active:scale-95 transition-all duration-200"
             >
               Zarezerwuj wizytę
             </Link>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <div className="flex lg:hidden">
@@ -214,7 +214,7 @@ export default function Navbar() {
               </Link>
             );
           })}
-          <div className="pt-4 pb-2 px-4">
+          {/* <div className="pt-4 pb-2 px-4">
             <Link
               href="#kontakt"
               onClick={() => setIsOpen(false)}
@@ -222,7 +222,7 @@ export default function Navbar() {
             >
               Zarezerwuj wizytę
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

@@ -117,10 +117,10 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => handleLinkClick(link.href)}
-                  className={`text-sm uppercase font-medium transition-colors duration-200 ${
+                  className={`text-sm uppercase font-medium tracking-wide transition-colors duration-200 ${
                     active
                       ? "text-teal-600 dark:text-teal-400 font-semibold"
-                      : "text-neutral-600 hover:text-teal-600 dark:text-neutral-400 dark:hover:text-teal-400"
+                      : "text-neutral-800 hover:text-teal-600"
                   }`}
                 >
                   {link.label}

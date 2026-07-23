@@ -80,14 +80,14 @@ export default function Home() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto"
           >
-            <a
+            {/* <a
               href="#kontakt"
               className="inline-flex items-center justify-center px-8 py-3.5 rounded-full text-base font-semibold text-white bg-teal-600 hover:bg-teal-500 active:bg-teal-700 shadow-lg shadow-teal-500/20 hover:shadow-teal-500/35 hover:-translate-y-0.5 transition-all duration-200"
             >
               Zarezerwuj wizytę
-            </a>
+            </a> */}
             <a
-              href="#uslugi"
+              href="/offer"
               className="inline-flex items-center justify-center px-8 py-3.5 rounded-full text-base font-semibold text-white bg-white/10 hover:bg-white/20 active:bg-white/5 border border-white/20 backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-200"
             >
               Dowiedz się więcej

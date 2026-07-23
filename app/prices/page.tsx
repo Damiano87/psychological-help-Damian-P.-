@@ -29,7 +29,7 @@ const cardVariants = {
 const Prices = () => {
   return (
     <div className="relative py-20 md:py-28 bg-teal-50 min-h-screen transition-colors duration-300 font-jost">
-      {/* Background Image with overlay for readability */}
+      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src="/leaves.webp"

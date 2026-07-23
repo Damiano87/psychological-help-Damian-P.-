@@ -14,7 +14,7 @@ const navLinks: NavLink[] = [
   { label: "O mnie", href: "/aboutme" },
   { label: "Usługi", href: "/offer" },
   { label: "Cennik", href: "/prices" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: "Kontakt", href: "/contact" },
 ];
 
 export default function Navbar() {

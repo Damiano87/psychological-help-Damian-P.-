@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { div } from "framer-motion/client";
 import Link from "next/link";
 
 const containerVariants = {
@@ -37,13 +36,13 @@ export default function Home() {
         {/* Background Image with overlay for readability */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/hero.webp"
+            src="/mainbg.webp"
             alt="Psychologiczna pomoc i wsparcie"
             fill
             priority
             className="object-center"
           />
-          <div className="absolute inset-0 bg-neutral-700/40 dark:bg-neutral-700/65 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-neutral-700/40 " />
         </div>
 
         {/* Hero Content */}
@@ -80,18 +79,12 @@ export default function Home() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto"
           >
-            {/* <a
-              href="#kontakt"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full text-base font-semibold text-white bg-teal-600 hover:bg-teal-500 active:bg-teal-700 shadow-lg shadow-teal-500/20 hover:shadow-teal-500/35 hover:-translate-y-0.5 transition-all duration-200"
-            >
-              Zarezerwuj wizytę
-            </a> */}
-            <a
+            <Link
               href="/offer"
               className="inline-flex items-center justify-center px-4 py-2 sm:px-8 sm:py-3.5 rounded-full text-xs sm:text-base font-semibold text-white bg-white/10 hover:bg-white/20 active:bg-white/5 border border-white/20 backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-200"
             >
               Dowiedz się więcej
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
       </section>
@@ -115,15 +108,16 @@ export default function Home() {
             <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
               <Image
                 src="https://images.pexels.com/photos/4100684/pexels-photo-4100684.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Terapia indywidualna"
+                alt="Konsultacje psychologiczne"
                 fill
-                sizes="(max-w-768px) 100vw, 50vw"
+                quality={60}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
               <div className="relative z-20 text-left">
                 <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
-                  Terapia indywidualna
+                  Konsultacje psychologiczne
                 </h3>
                 <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
                   Wsparcie w radzeniu sobie z lękiem, depresją, stresem oraz
@@ -137,15 +131,16 @@ export default function Home() {
             <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
               <Image
                 src="https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Terapia par i małżeństw"
+                alt="Psychotraumatologia"
                 fill
-                sizes="(max-w-768px) 100vw, 50vw"
+                quality={60}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
               <div className="relative z-20 text-left">
                 <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
-                  Terapia par i małżeństw
+                  Psychotraumatologia
                 </h3>
                 <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
                   Pomoc w odbudowywaniu bliskości, rozwiązywaniu konfliktów i
@@ -159,15 +154,38 @@ export default function Home() {
             <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
               <Image
                 src="https://images.pexels.com/photos/7176319/pexels-photo-7176319.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Grupy wsparcia i warsztaty"
+                alt="Terapia TSR"
                 fill
-                sizes="(max-w-768px) 100vw, 50vw"
+                quality={60}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
               <div className="relative z-20 text-left">
                 <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
-                  Grupy wsparcia i warsztaty
+                  Terapia TSR
+                </h3>
+                <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
+                  Przestrzeń do dzielenia się doświadczeniami z osobami o
+                  podobnych wyzwaniach. Rozwijaj swoje umiejętności osobiste i
+                  społeczne w grupie.
+                </p>
+              </div>
+            </div>
+            {/* Card 4 */}
+            <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
+              <Image
+                src="https://images.pexels.com/photos/7176298/pexels-photo-7176298.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Warsztaty i szkolenia"
+                fill
+                quality={60}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
+              <div className="relative z-20 text-left">
+                <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
+                  Warsztaty i szkolenia
                 </h3>
                 <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
                   Przestrzeń do dzielenia się doświadczeniami z osobami o

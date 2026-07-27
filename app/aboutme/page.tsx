@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import LeftCard from "./_components/LeftCard";
+import RightCard from "./_components/RightCard";
+import BottomSection from "./_components/BottomSection";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -41,7 +44,7 @@ export default function AboutMe() {
             priority
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-neutral-800/30 dark:bg-neutral-800/30 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-neutral-800/30 backdrop-blur-[1px]" />
         </div>
 
         {/* Content */}
@@ -109,7 +112,7 @@ export default function AboutMe() {
       </section>
       {/* my proffesional experience and education */}
       <section className="py-16 md:py-24 bg-teal-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 gap-12 md:gap-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="w-fit relative mb-6">
             <h3 className="font-roboto text-xl sm:text-3xl font-bold">
               Moja ścieżka zawodowa
@@ -142,8 +145,25 @@ export default function AboutMe() {
           </p>
         </div>
       </section>
-      {/* Register for therapy session */}
-      {/* <section className="py-16 md:py-24 bg-teal-200">
+      {/* Two columns info */}
+      <section className="py-16 md:py-24 bg-teal-100 font-roboto">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 items-start gap-12 md:gap-16">
+          {/* Column 1 - Filar psychologiczny */}
+          <LeftCard />
+          {/* Column 2 - Filar zawodowy */}
+          <RightCard />
+        </div>
+      </section>
+      <BottomSection />
+    </div>
+  );
+}
+
+{
+  /* Register for therapy session */
+}
+{
+  /* <section className="py-16 md:py-24 bg-teal-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 gap-12 md:gap-16">
           <p className="font-roboto text-lg leading-relaxed text-neutral-700 uppercase">
             - zapraszam do rejestracji
@@ -165,7 +185,5 @@ export default function AboutMe() {
             Zarejestruj się
           </button>
         </div>
-      </section> */}
-    </div>
-  );
+      </section> */
 }

@@ -19,31 +19,34 @@ export default function PsychologicalPillar() {
       >
         <div className="overflow-hidden">
           <p className="text-md md:text-lg leading-relaxed text-neutral-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin
-            gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-            quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-            nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit
-            amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio
-            tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat
-            auctor eu in elit. Class aptent taciti sociosqu ad litora torquent
-            per conubia nostra, per inceptos himenaeos. Mauris in erat justo.
-            Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed
-            non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum
-            nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris
-            egestas quam, ut aliquam massa nisl quis neque.
+            Jakościowa ścieżka edukacyjna w postaci studiów psychologicznych na
+            KUL JP II zapewniła mi solidne doświadczenie oraz wyposażyła w
+            konkretne narzędzia diagnostyczne. Jestem dyplomowanym
+            psychotraumatologiem, zajmującym się leczeniem skutków doświadczeń
+            traumatycznych. Posiadam także kwalifikacje do badania kierowców pod
+            kątem zdolności psychomotorycznych oraz predyspozycji
+            psychologicznych. Jestem w trakcie szkolenia w zakresie Terapii
+            Skoncentrowanej na Rozwiązaniu (TSR), która jest skuteczną
+            odpowiedzią na dzisiejsze czasy – krótkoterminową, konkretną i o
+            solidnej strukturze.
+          </p>
+          <br />
+          <p className="text-md md:text-lg leading-relaxed text-neutral-600">
+            Łączę w pracy z Klientem podejście werbalne z pracą z ciałem. Na
+            bieżąco śledzę rozwój współczesnej psychologii i jej odkrycia.
+            Aktualnie zajmuje mnie zgłębianie technik Terapii Metapoznawczej.
           </p>
         </div>
       </div>
 
-      {/* Zawsze widoczny fragment tekstu, gdy zwinięte */}
+      {/* Always seen */}
       {!isExpanded && (
-        <p className="text-md md:text-lg leading-relaxed text-neutral-600 line-clamp-5 -mt-7">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin
-          gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
-          bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
-          elit.
+        <p className="text-md md:text-lg leading-relaxed text-neutral-600 line-clamp-6 -mt-7">
+          Jakościowa ścieżka edukacyjna w postaci studiów psychologicznych na
+          KUL JP II zapewniła mi solidne doświadczenie oraz wyposażyła w
+          konkretne narzędzia diagnostyczne. Jestem dyplomowanym
+          psychotraumatologiem, zajmującym się leczeniem skutków doświadczeń
+          traumatycznych.
         </p>
       )}
 

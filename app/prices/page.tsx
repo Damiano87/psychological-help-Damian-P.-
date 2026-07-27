@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { IMAGES } from "@/lib/constants";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -29,16 +30,6 @@ const cardVariants = {
 const Prices = () => {
   return (
     <div className="relative py-20 md:py-28 bg-teal-50 min-h-screen transition-colors duration-300 font-jost">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/leaves.webp"
-          alt="Damian Piwowarczyk"
-          fill
-          priority
-          className="object-cover object-center"
-        />
-      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -70,7 +61,7 @@ const Prices = () => {
             className="text-white w-full sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-center p-6 sm:p-10 group cursor-pointer"
           >
             <Image
-              src="https://images.pexels.com/photos/4100684/pexels-photo-4100684.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src={IMAGES.card1}
               alt="Konsultacje psychologiczne"
               fill
               sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
@@ -98,7 +89,7 @@ const Prices = () => {
             className="text-white w-full  sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-center p-6 sm:p-10 group cursor-pointer"
           >
             <Image
-              src="https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src={IMAGES.card2}
               alt="Psychotraumatologia"
               fill
               sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
@@ -126,7 +117,7 @@ const Prices = () => {
             className="text-white w-full sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-center p-6 sm:p-10 group cursor-pointer"
           >
             <Image
-              src="https://images.pexels.com/photos/7176319/pexels-photo-7176319.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src={IMAGES.card3}
               alt="Terapia TSR"
               fill
               sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
@@ -153,7 +144,7 @@ const Prices = () => {
             className="text-white w-full sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-center p-6 sm:p-10 group cursor-pointer"
           >
             <Image
-              src="https://images.pexels.com/photos/7176298/pexels-photo-7176298.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src={IMAGES.card4}
               alt="Warsztaty i szkolenia"
               fill
               sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"

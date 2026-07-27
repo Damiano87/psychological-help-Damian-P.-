@@ -101,9 +101,8 @@ export default function Navbar() {
                   <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 0 9.5a7 7 0 0 1-8 8.5zm0 0v-8" />
                 </svg>
               </div>
-              <span className="text-xl font-bold tracking-tight text-neutral-800 dark:text-neutral-400">
-                Psycho
-                <span className="text-teal-600 dark:text-teal-400">Help</span>
+              <span className="text-sm md:text-lg lg:text-xl font-bold tracking-tight text-neutral-800">
+                Miejsce spotkań <span className="text-teal-600">ZMIANA</span>
               </span>
             </Link>
           </div>
@@ -128,17 +127,6 @@ export default function Navbar() {
               );
             })}
           </nav>
-
-          {/* Desktop Call To Action */}
-          {/* <div className="hidden lg:flex items-center">
-            <Link
-              href="#kontakt"
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-teal-600 hover:bg-teal-500 active:bg-teal-700 shadow-md shadow-teal-500/10 hover:shadow-lg hover:shadow-teal-500/20 active:scale-95 transition-all duration-200"
-            >
-              Zarezerwuj wizytę
-            </Link>
-          </div> */}
-
           {/* Mobile Menu Button */}
           <div className="flex lg:hidden">
             <button

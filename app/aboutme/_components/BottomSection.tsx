@@ -46,15 +46,17 @@ const BottomSection = () => {
             ))}
           </motion.span>
         </h3>
-        <p className="text-base md:text-lg leading-relaxed text-neutral-600 mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-          laborum alias, rerum aliquid expedita commodi, consectetur ipsa,
-          voluptas illo exercitationem quaerat? Deserunt, exercitationem eius?
-        </p>
-        <p className="text-base md:text-lg leading-relaxed text-neutral-600 mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nam
-          dolorem consequatur officiis delectus non corporis velit eum, culpa
-          rem?
+        <p className="text-sm md:text-lg leading-relaxed text-neutral-600 mb-4">
+          W swojej filozofii pracy czerpię inspirację od największych myślicieli
+          i reformatorów psychologii oraz psychoanalizy. Na moje podejście
+          wpływają szczególnie poglądy Carla Rogersa, Rollo Maya, Viktora
+          Frankla oraz Alexandra Lowena na temat istnienia człowieka, jego
+          naturalnej tendencji do spójności i koherencji, oraz przekonanie o
+          wyjątkowości każdej osoby. Stawiam na budowanie autentycznej relacji
+          terapeutycznej z Klientem, ponieważ to ona, staje się wehikułem
+          zmiany. Liczy się dla mnie realny i autentyczny wpływ na życie
+          Klienta, poparty sprawdzonymi technikami i narzędziami
+          terapeutycznymi.
         </p>
       </div>
     </section>

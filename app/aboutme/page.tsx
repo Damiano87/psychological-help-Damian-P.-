@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import LeftCard from "./_components/LeftCard";
 import RightCard from "./_components/RightCard";
 import BottomSection from "./_components/BottomSection";
+import { IMAGES } from "@/lib/constants";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -38,13 +39,13 @@ export default function AboutMe() {
         {/* Background Image with overlay for readability */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/aboutme.webp"
-            alt="Damian Piwowarczyk"
+            src={IMAGES.aboutMeHero}
+            alt="Drzewa"
             fill
             priority
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-neutral-800/30 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-neutral-800/40" />
         </div>
 
         {/* Content */}
@@ -77,24 +78,37 @@ export default function AboutMe() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
               />
             </div>
-            <p className="text-lg leading-relaxed text-neutral-600 font-roboto">
+            <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
               <span className="float-left text-5xl leading-none pr-3 mt-1">
-                L
+                J
               </span>
-              orem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin
-              gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-              quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-              nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit
-              amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio
-              tincidunt auctor a ornare odio. Sed non mauris vitae erat
-              consequat auctor eu in elit. Class aptent taciti sociosqu ad
-              litora torquent per conubia nostra, per inceptos himenaeos. Mauris
-              in erat justo. Nullam ac urna eu felis dapibus condimentum sit
-              amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin
-              condimentum fermentum nunc. Etiam pharetra, erat sed fermentum
-              feugiat, velit mauris egestas quam, ut aliquam massa nisl quis
-              neque.
+              estem absolwentem studiów psychologicznych w trybie dziennym na
+              Katolickim Uniwersytecie Lubelskim Jana Pawła II (obrona dyplomu w
+              2011 roku), psychotraumatologiem oraz psychologiem transportu.
+              Jestem w trakcie szkolenia w zakresie Terapii Skoncentrowanej na
+              Rozwiązaniach (TSR). Posiadam wieloletnie doświadczenie
+              psychologiczne w pracy z dziećmi i młodymi dorosłymi, które
+              zdobywałem w poradni psychologiczno-pedagogicznej oraz w szkołach
+              podstawowych i ponadpodstawowych. Od wielu lat pracuję z rodzicami
+              i opiekunami, prowadząc warsztaty oraz indywidualne konsultacje.
+              Cały czas poznaję problemy młodych ludzi, przed którymi świat
+              stawia cały skomplikowany wachlarz wyzwań i presji. Wrażliwość
+              współczesnych nastolatków, ich świadomość siebie i inteligencja
+              emocjonalna sprawiają, że coraz trudniej odnaleźć im satysfakcję i
+              sens oraz otoczyć się zdrowymi, wspierającymi relacjami. Czerpię
+              ogromną radość z budowania odporności psychicznej i spójności w
+              dzieciach, młodzieży oraz dorosłych.
+            </p>
+            <br />
+            <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
+              Pracę psychologa traktuję jako misję. W kontakcie z Klientem
+              skupiam się na budowaniu bezpiecznej relacji, która jest nośnikiem
+              realnej zmiany, a także na poprawie jakości życia psychicznego.
+              Stawiam na głębię spotkania oraz prostotę, skupiając się na
+              wymiernych efektach, a także uruchomiając zasoby Klienta oraz jego
+              naturalną odporność psychiczną. Łączę techniki terapii werbalnej z
+              pracą z ciałem, stale pogłębiając wiedzę o funkcjonowaniu
+              człowieka, jego jaźni, psychiki i ciała.
             </p>
           </div>
 
@@ -125,23 +139,22 @@ export default function AboutMe() {
               transition={{ duration: 0.8, ease: "easeOut" }}
             />
           </div>
-          <p className="font-roboto text-lg leading-relaxed text-neutral-600 mb-6">
+          <p className="font-roboto text-sm sm:text-lg leading-relaxed text-neutral-600 mb-6">
             <span className="float-left text-5xl leading-none pr-3 mt-1">
-              L
+              R
             </span>
-            orem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin
-            gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-            quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-            nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit
-            amet mauris. Morbi accumsan ipsum velit.
-          </p>
-
-          <p className="font-roboto text-lg leading-relaxed text-neutral-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-            officiis mollitia ab fugiat, at esse fugit amet sequi dolore ipsam
-            reprehenderit iste nam illo maiores ratione corporis quia aut
-            veniam!
+            óżnorodna ścieżka zawodowa to siła i atut, które wplatam do
+            działalności psychologa. Dzięki szerokiemu doświadczeniu zawodowemu
+            potrafię spojrzeć na wyzwania i problemy Klienta z pogłębionej
+            perspektywy. Posiadam wieloletnie doświadczenie korporacyjne,
+            projektowe oraz medialne. Pracowałem także w instytucjach kultury na
+            stanowiskach kierowniczych. Jestem autorem książki poetyckiej
+            „rezyliencje", dofinansowanej przez Ministerstwo Kultury i
+            Dziedzictwa Narodowego, a zainteresowania literackie stanowią
+            integralną część mojego życia, ubogacając mój warsztat psychologa.
+            Publikowałem artykuły i recenzje w „Rzeczpospolitej", „Gazecie
+            Wyborczej", na łamach dwutygodnik.com, w „Piśmie. Magazynie Opinii"
+            oraz w „Przekroju".
           </p>
         </div>
       </section>

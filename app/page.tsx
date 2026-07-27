@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { IMAGES } from "@/lib/constants";
+import MacbethQuote from "@/components/Quote";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -32,15 +34,15 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] pb-6 sm:pb-0 w-full flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative min-h-[calc(100dvh-4rem)] sm:min-h-[calc(100dvh-5rem)] pb-6 w-full overflow-hidden">
         {/* Background Image with overlay for readability */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/mainbg.webp"
+            src={IMAGES.homeHero}
             alt="Psychologiczna pomoc i wsparcie"
             fill
             priority
-            className="object-center"
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-neutral-700/40 " />
         </div>
@@ -50,11 +52,11 @@ export default function Home() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative z-10 text-center px-4 max-w-4xl sm:mt-0 mt-4 mx-auto flex flex-col items-center"
+          className="relative z-10 px-4 max-w-7xl mx-auto sm:mt-20 flex flex-col items-start"
         >
           <motion.span
             variants={itemVariants}
-            className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-semibold bg-teal-500/10 text-teal-400 border border-teal-500/20 mb-6 backdrop-blur-sm"
+            className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-semibold bg-teal-500/10 text-teal-400 border border-teal-500/20 mt-6 sm:mt-0 mb-6 backdrop-blur-sm"
           >
             Profesjonalne wsparcie psychologiczne
           </motion.span>
@@ -63,16 +65,16 @@ export default function Home() {
             variants={itemVariants}
             className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6 drop-shadow-sm max-w-3xl leading-tight"
           >
-            Odzyskaj spokój i równowagę w swoim życiu
+            Psychologia zmiany, wzmocnienia i wewnętrznej spójności.
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
             className="text-lg sm:text-xl text-neutral-200 mb-10 max-w-2xl leading-relaxed drop-shadow-sm"
           >
-            Zrób pierwszy krok w stronę lepszego jutra. Oferujemy profesjonalną
-            terapię indywidualną, partnerską oraz wsparcie w kryzysie w
-            bezpiecznej i pełnej empatii atmosferze.
+            Szukam praktycznych rozwiązań przynoszących realne efekty w poprawie
+            jakości życia oraz w przywróceniu równowagi oraz dobrostanu
+            psychicznego.
           </motion.p>
 
           <motion.div
@@ -94,9 +96,6 @@ export default function Home() {
           <span className="text-2xl font-semibold uppercase tracking-wider text-teal-600">
             Jak mogę pomóc
           </span>
-          {/* <h2 className="text-3xl sm:text-5xl font-bold font-jost text-neutral-900 mt-2 mb-4">
-            Oferta leczenia psychologicznego
-          </h2> */}
           <p className="text-neutral-600 max-w-2xl mx-auto mt-12 mb-12 md:mb-16 font-roboto leading-relaxed">
             Dostosowuję metody terapeutyczne do Twoich indywidualnych potrzeb,
             zapewniając bezpieczną i pełną empatii przestrzeń do rozwoju oraz
@@ -107,7 +106,7 @@ export default function Home() {
             {/* Card 1 */}
             <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
               <Image
-                src="https://images.pexels.com/photos/4100684/pexels-photo-4100684.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src={IMAGES.card1}
                 alt="Konsultacje psychologiczne"
                 fill
                 quality={60}
@@ -130,7 +129,7 @@ export default function Home() {
             {/* Card 2 */}
             <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
               <Image
-                src="https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src={IMAGES.card2}
                 alt="Psychotraumatologia"
                 fill
                 quality={60}
@@ -153,7 +152,7 @@ export default function Home() {
             {/* Card 3 */}
             <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
               <Image
-                src="https://images.pexels.com/photos/7176319/pexels-photo-7176319.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src={IMAGES.card3}
                 alt="Terapia TSR"
                 fill
                 quality={60}
@@ -175,7 +174,7 @@ export default function Home() {
             {/* Card 4 */}
             <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
               <Image
-                src="https://images.pexels.com/photos/7176298/pexels-photo-7176298.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src={IMAGES.card4}
                 alt="Warsztaty i szkolenia"
                 fill
                 quality={60}
@@ -214,24 +213,37 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
               />
             </div>
-            <p className="text-xs sm:text-lg leading-relaxed text-neutral-600 font-roboto">
+            <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
               <span className="float-left text-4xl sm:text-5xl leading-none pr-3 mt-1">
-                L
+                J
               </span>
-              orem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin
-              gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-              quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-              nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit
-              amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio
-              tincidunt auctor a ornare odio. Sed non mauris vitae erat
-              consequat auctor eu in elit. Class aptent taciti sociosqu ad
-              litora torquent per conubia nostra, per inceptos himenaeos. Mauris
-              in erat justo. Nullam ac urna eu felis dapibus condimentum sit
-              amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin
-              condimentum fermentum nunc. Etiam pharetra, erat sed fermentum
-              feugiat, velit mauris egestas quam, ut aliquam massa nisl quis
-              neque.
+              estem absolwentem studiów psychologicznych w trybie dziennym na
+              Katolickim Uniwersytecie Lubelskim Jana Pawła II (obrona dyplomu w
+              2011 roku), psychotraumatologiem oraz psychologiem transportu.
+              Jestem w trakcie szkolenia w zakresie Terapii Skoncentrowanej na
+              Rozwiązaniach (TSR). Posiadam wieloletnie doświadczenie
+              psychologiczne w pracy z dziećmi i młodymi dorosłymi, które
+              zdobywałem w poradni psychologiczno-pedagogicznej oraz w szkołach
+              podstawowych i ponadpodstawowych. Od wielu lat pracuję z rodzicami
+              i opiekunami, prowadząc warsztaty oraz indywidualne konsultacje.
+              Cały czas poznaję problemy młodych ludzi, przed którymi świat
+              stawia cały skomplikowany wachlarz wyzwań i presji. Wrażliwość
+              współczesnych nastolatków, ich świadomość siebie i inteligencja
+              emocjonalna sprawiają, że coraz trudniej odnaleźć im satysfakcję i
+              sens oraz otoczyć się zdrowymi, wspierającymi relacjami. Czerpię
+              ogromną radość z budowania odporności psychicznej i spójności w
+              dzieciach, młodzieży oraz dorosłych.
+            </p>
+            <br />
+            <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
+              Pracę psychologa traktuję jako misję. W kontakcie z Klientem
+              skupiam się na budowaniu bezpiecznej relacji, która jest nośnikiem
+              realnej zmiany, a także na poprawie jakości życia psychicznego.
+              Stawiam na głębię spotkania oraz prostotę, skupiając się na
+              wymiernych efektach, a także uruchamiając zasoby Klienta oraz jego
+              naturalną odporność psychiczną. Łączę techniki terapii werbalnej z
+              pracą z ciałem, stale pogłębiając wiedzę o funkcjonowaniu
+              człowieka, jego jaźni, psychiki i ciała.
             </p>
             <Link
               className="inline-block text-teal-600 border border-teal-600 hover:text-white hover:bg-teal-600 duration-300 px-4 py-2 mt-10 rounded-md text-lg font-jost"
@@ -253,6 +265,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <MacbethQuote />
     </div>
   );
 }

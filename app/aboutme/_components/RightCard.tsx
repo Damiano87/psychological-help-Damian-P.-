@@ -19,31 +19,35 @@ export default function PsychologicalPillar() {
       >
         <div className="overflow-hidden">
           <p className="text-md md:text-lg leading-relaxed text-neutral-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin
-            gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-            quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-            nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit
-            amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio
-            tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat
-            auctor eu in elit. Class aptent taciti sociosqu ad litora torquent
-            per conubia nostra, per inceptos himenaeos. Mauris in erat justo.
-            Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed
-            non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum
-            nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris
-            egestas quam, ut aliquam massa nisl quis neque.
+            Posiadam wieloletnie doświadczenie w pracy z ludźmi. Podczas pracy w
+            szkołach podstawowych oraz ponadpodstawowych przez ostatnie lata
+            towarzyszyłem podopiecznym w szeregu wyzwań, między innymi:
+            zaburzeniami osobowości, depresją, pustką egzystencjalną, niską
+            samooceną, przemocą rówieśniczą i uzależnieniami. W kontakcie z
+            dziećmi i młodzieżą zachowuję postawę proaktywną, działam w grupie
+            na zasadach warsztatowych oraz pracuję w klasach pod kątem
+            psychoedukacji i psychoprofilaktyki. W pracy projektowej i
+            korporacyjnej, w międzynarodowym środowisku, rozwijałem swoje
+            kompetencje menedżerskie i interpersonalne. Doświadczenie w
+            zarządzaniu zespołem zdobywałem także w mediach i instytucjach
+            kultury. Od lat jestem związany zawodowo z literaturą – jestem
+            autorem tomiku wierszy dofinansowanego przez Ministerstwo Kultury i
+            Dziedzictwa Narodowego. Aktualnie pracuję nad nową książką poetycką,
+            a dodatkowo piszę recenzje poezji współczesnej dla czołowych
+            polskich mediów. Brałem udział jako ekspert w podcastach, panelach
+            oraz programach telewizyjnych.
           </p>
         </div>
       </div>
 
-      {/* Zawsze widoczny fragment tekstu, gdy zwinięte */}
+      {/* Always seen */}
       {!isExpanded && (
-        <p className="text-md md:text-lg leading-relaxed text-neutral-600 line-clamp-5 -mt-7">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin
-          gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
-          bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
-          elit.
+        <p className="text-md md:text-lg leading-relaxed text-neutral-600 line-clamp-7 -mt-7">
+          Posiadam wieloletnie doświadczenie w pracy z ludźmi. Podczas pracy w
+          szkołach podstawowych oraz ponadpodstawowych przez ostatnie lata
+          towarzyszyłem podopiecznym w szeregu wyzwań, między innymi:
+          zaburzeniami osobowości, depresją, pustką egzystencjalną, niską
+          samooceną, przemocą rówieśniczą i uzależnieniami.
         </p>
       )}
 

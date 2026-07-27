@@ -18,24 +18,28 @@ export default function MacbethQuote() {
   return (
     <section
       className={`${ebGaramond.variable} ${cormorant.variable} relative flex items-center justify-center min-h-105 w-full overflow-hidden px-6 py-20`}
-      style={{ backgroundColor: "#141110" }}
     >
       {/* subtle, theatrical glow in the background */}
       <div
         className="pointer-events-none absolute inset-0 opacity-70"
         style={{
           background:
-            "radial-gradient(circle at 50% 35%, rgba(122,26,26,0.18), transparent 60%)",
+            "radial-gradient(circle at 50% 35%, rgba(45,106,79,0.48), transparent 60%)",
         }}
       />
 
-      <div className="relative max-w-2xl text-center">
+      <div
+        className="relative max-w-2xl text-center px-10 py-12 md:px-14 md:py-14"
+        style={{
+          border: "1px solid rgba(74,124,89,0.55)",
+        }}
+      >
         <span
           aria-hidden="true"
           className="block text-6xl leading-none mb-4"
           style={{
             fontFamily: "var(--font-quote)",
-            color: "#7a1a1a",
+            color: "#4a7c59",
             opacity: 0.6,
           }}
         >
@@ -46,7 +50,7 @@ export default function MacbethQuote() {
           className="text-2xl md:text-3xl italic leading-relaxed tracking-wide"
           style={{
             fontFamily: "var(--font-quote)",
-            color: "#ece4d8",
+            color: "#8f867a",
           }}
         >
           Ubierz żal w słowa; ból, który nie mówi, szepcze do serca i każe mu
@@ -55,7 +59,7 @@ export default function MacbethQuote() {
 
         <div
           className="mx-auto mt-8 mb-6 h-px w-16"
-          style={{ backgroundColor: "#7a1a1a", opacity: 0.6 }}
+          style={{ backgroundColor: "#4a7c59", opacity: 0.6 }}
         />
 
         <figcaption

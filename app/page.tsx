@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[calc(100dvh-4rem)] sm:min-h-[calc(100dvh-5rem)] pb-6 w-full overflow-hidden">
+      <section className="relative  pb-6 w-full overflow-hidden">
         {/* Background Image with overlay for readability */}
         <div className="absolute inset-0 -z-10">
           <Image
@@ -42,7 +42,7 @@ export default function Home() {
             alt="Psychologiczna pomoc i wsparcie"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-neutral-700/40 " />
         </div>

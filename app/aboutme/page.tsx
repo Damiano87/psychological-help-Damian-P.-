@@ -5,31 +5,7 @@ import { motion } from "framer-motion";
 import LeftCard from "./_components/LeftCard";
 import RightCard from "./_components/RightCard";
 import BottomSection from "./_components/BottomSection";
-import { IMAGES } from "@/lib/constants";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.75,
-      delayChildren: 0.1,
-    },
-  },
-} as const;
-
-const itemVariants = {
-  hidden: { opacity: 0, y: -30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 20,
-      damping: 4,
-    },
-  },
-} as const;
+import { containerVariants, itemVariants, IMAGES } from "@/lib/constants";
 
 export default function AboutMe() {
   return (
@@ -39,7 +15,7 @@ export default function AboutMe() {
         {/* Background Image with overlay for readability */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src={IMAGES.aboutMeHero}
+            src="/damian-hero.webp"
             alt="Drzewa"
             fill
             priority
@@ -113,7 +89,7 @@ export default function AboutMe() {
           </div>
 
           {/* Image container */}
-          <div className="shrink-0 w-full max-w-[320px] sm:max-w-95 aspect-4/5 relative rounded-2xl overflow-hidden border-4 border-neutral-900 flex items-center justify-center">
+          <div className="shrink-0 w-full max-w-96 sm:max-w-120 aspect-4/5 relative rounded-2xl overflow-hidden flex items-center justify-center">
             <Image
               src="/damian-aboutme.webp"
               alt="Zdjęcie profilowe"

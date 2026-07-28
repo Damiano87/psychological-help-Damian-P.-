@@ -191,7 +191,7 @@ export default function Home() {
           </div>
 
           {/* Image container */}
-          <div className="shrink-0 w-full max-w-[320px] sm:max-w-95 aspect-4/5 relative rounded-2xl overflow-hidden border-4 border-neutral-900 flex items-center justify-center">
+          <div className="shrink-0 w-full max-w-96 sm:max-w-120 aspect-4/5 relative rounded-2xl overflow-hidden flex items-center justify-center">
             <Image
               src="/damian-home.webp"
               alt="Zdjęcie profilowe"

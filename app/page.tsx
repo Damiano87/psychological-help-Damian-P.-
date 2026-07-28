@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { IMAGES } from "@/lib/constants";
+import { CARDS, IMAGES } from "@/lib/constants";
 import MacbethQuote from "@/components/Quote";
 
 const containerVariants = {
@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative  pb-6 w-full overflow-hidden">
+      <section className="relative  py-6 w-full overflow-hidden">
         {/* Background Image with overlay for readability */}
         <div className="absolute inset-0 -z-10">
           <Image
@@ -54,13 +54,6 @@ export default function Home() {
           animate="visible"
           className="relative z-10 px-4 max-w-7xl mx-auto sm:mt-20 flex flex-col items-start"
         >
-          <motion.span
-            variants={itemVariants}
-            className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-semibold bg-teal-500/10 text-teal-400 border border-teal-500/20 mt-6 sm:mt-0 mb-6 backdrop-blur-sm"
-          >
-            Profesjonalne wsparcie psychologiczne
-          </motion.span>
-
           <motion.h1
             variants={itemVariants}
             className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6 drop-shadow-sm max-w-3xl leading-tight"
@@ -103,96 +96,40 @@ export default function Home() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-8">
-            {/* Card 1 */}
-            <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
-              <Image
-                src={IMAGES.card1}
-                alt="Konsultacje psychologiczne"
-                fill
-                quality={60}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
-              <div className="relative z-20 text-left">
-                <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
-                  Konsultacje psychologiczne
-                </h3>
-                <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
-                  Wsparcie w radzeniu sobie z lękiem, depresją, stresem oraz
-                  kryzysami życiowymi. Pomogę Ci odnaleźć wewnętrzną siłę i
-                  równowagę w bezpiecznej atmosferze.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
-              <Image
-                src={IMAGES.card2}
-                alt="Psychotraumatologia"
-                fill
-                quality={60}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
-              <div className="relative z-20 text-left">
-                <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
-                  Psychotraumatologia
-                </h3>
-                <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
-                  Pomoc w odbudowywaniu bliskości, rozwiązywaniu konfliktów i
-                  poprawie komunikacji. Przejdźmy wspólnie przez trudności w
-                  Waszej relacji.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
-              <Image
-                src={IMAGES.card3}
-                alt="Terapia TSR"
-                fill
-                quality={60}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
-              <div className="relative z-20 text-left">
-                <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
-                  Terapia TSR
-                </h3>
-                <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
-                  Przestrzeń do dzielenia się doświadczeniami z osobami o
-                  podobnych wyzwaniach. Rozwijaj swoje umiejętności osobiste i
-                  społeczne w grupie.
-                </p>
-              </div>
-            </div>
-            {/* Card 4 */}
-            <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
-              <Image
-                src={IMAGES.card4}
-                alt="Warsztaty i szkolenia"
-                fill
-                quality={60}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
-              <div className="relative z-20 text-left">
-                <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
-                  Warsztaty i szkolenia
-                </h3>
-                <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
-                  Przestrzeń do dzielenia się doświadczeniami z osobami o
-                  podobnych wyzwaniach. Rozwijaj swoje umiejętności osobiste i
-                  społeczne w grupie.
-                </p>
-              </div>
-            </div>
+            {/* Cards */}
+            {CARDS?.map((card, index) => {
+              return (
+                <Link
+                  key={index}
+                  href={card.href}
+                  className="w-full md:w-[calc(50%-1rem)] max-w-xl min-h-60 sm:min-h-85 relative rounded-3xl overflow-hidden  border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer"
+                >
+                  <div>
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      quality={60}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className={`object-cover transition-transform duration-700 ${
+                        index === 2
+                          ? "scale-150 -translate-y-15 group-hover:scale-[1.7]"
+                          : "group-hover:scale-105"
+                      }`}
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
+                    <div className="relative z-20 text-left">
+                      <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
+                        {card.title}
+                      </h3>
+                      <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
+                        {card.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -254,13 +191,13 @@ export default function Home() {
           </div>
 
           {/* Image container */}
-          <div className="shrink-0 w-full max-w-[320px] sm:max-w-95 aspect-4/5 relative rounded-2xl overflow-hidden border-4 border-neutral-900 shadow-lg flex items-center justify-center">
+          <div className="shrink-0 w-full max-w-[320px] sm:max-w-95 aspect-4/5 relative rounded-2xl overflow-hidden border-4 border-neutral-900 flex items-center justify-center">
             <Image
-              src="/file.svg"
+              src="/damian-home.webp"
               alt="Zdjęcie profilowe"
-              width={160}
-              height={160}
-              className="opacity-40 dark:opacity-60 object-contain transition-transform duration-300 hover:scale-105"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover"
             />
           </div>
         </div>
@@ -269,3 +206,78 @@ export default function Home() {
     </div>
   );
 }
+
+/* Card 2 */
+
+/* <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
+  <Image
+    src={IMAGES.card2}
+    alt="Psychotraumatologia"
+    fill
+    quality={60}
+    sizes="(max-width: 768px) 100vw, 50vw"
+    className="object-cover transition-transform duration-700 group-hover:scale-105"
+  />
+  <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
+  <div className="relative z-20 text-left">
+    <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
+      Psychotraumatologia
+    </h3>
+    <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
+      Jako dyplomowany psycholog i psychotraumatolog zajmuję się leczeniem ciała
+      i umysłu poddanych urazowym doświadczeniom.
+    </p>
+  </div>
+</div>;
+
+{
+  /* Card 3 */
+
+/* <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
+  <Image
+    src={IMAGES.card3}
+    alt="Terapia TSR"
+    fill
+    quality={60}
+    sizes="(max-width: 768px) 100vw, 50vw"
+    className="object-cover transition-transform duration-700 group-hover:scale-105"
+  />
+  <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
+  <div className="relative z-20 text-left">
+    <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
+      Terapia TSR
+    </h3>
+    <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
+      Jestem terapeutą w trakcie szkolenia w zakresie Terapii Skoncentrowanej na
+      Rozwiązaniach. W swojej pracy wykorzystuję techniki TSR, których celem
+      jest uruchomienie zasobów Klienta, wzmocnienie jego mocnych stron oraz
+      zidentyfikowanie wewnętrznych strategii, które są nieskuteczne i
+      nieadaptacyjne.
+    </p>
+  </div>
+</div>;
+{
+  /* Card 4 */
+
+/* <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
+  <Image
+    src={IMAGES.card4}
+    alt="Warsztaty i szkolenia"
+    fill
+    quality={60}
+    sizes="(max-width: 768px) 100vw, 50vw"
+    className="object-cover transition-transform duration-700 group-hover:scale-105"
+  />
+  <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
+  <div className="relative z-20 text-left">
+    <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
+      Warsztaty i szkolenia
+    </h3>
+    <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
+      Przeprowadziłem szereg szkoleń i warsztatów dla rodziców, opiekunów oraz
+      pracowników korporacji i instytucji. Do każdego spotkania ustalam
+      scenariusz indywidualnie, uwzględniając oczekiwania grupy oraz jej
+      dynamikę.
+    </p>
+  </div>
+</div>; */

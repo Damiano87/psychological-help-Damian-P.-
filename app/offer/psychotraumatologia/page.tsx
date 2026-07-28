@@ -50,21 +50,21 @@ const Psychotraumatology = () => {
             >
               <p className="text-neutral-700 text-lg leading-relaxed">
                 Jako dyplomowany psycholog i psychotraumatolog zajmuję się
-                leczeniem ciała i umysłu poddanych urazowym doświadczeniom.
-                Zrozumienie tego, jak mózg i ciało przetwarzają sytuacje
-                traumatyczne, jest kluczowe dla zastosowania odpowiednich metod
-                terapeutycznych. Każdorazowo dostosowuję sposób działania do
-                konkretnego przypadku.
+                leczeniem osób z objawami stresu potrauamatycznego. Zrozumienie
+                tego, jak mózg i ciało przetwarzają sytuacje traumatyczne, jest
+                kluczowe dla zastosowania odpowiednich metod terapeutycznych.
+                Każdorazowo dostosowuję sposób działania do konkretnego
+                przypadku.
               </p>
-              <p className="text-neutral-700 text-lg leading-relaxed">
+              {/* <p className="text-neutral-700 text-lg leading-relaxed">
                 Trauma jest doświadczeniem psychofizjologicznym, dlatego w swoim
                 podejściu do pracy z osobami z objawami stresu pourazowego łączę
                 podejście somatyczne z technikami werbalnymi.
-              </p>
+              </p> */}
 
               <div className="flex flex-col gap-2 pt-2">
                 <p className="text-neutral-800 text-lg">
-                  <span className="font-semibold"> Czas trwania:</span> do 50
+                  <span className="font-semibold"> Czas trwania:</span> do 60
                   minut
                 </p>
                 <p className="text-neutral-800 text-lg">

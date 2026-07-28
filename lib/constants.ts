@@ -16,14 +16,14 @@ export const CARDS = [
     image: "https://images.pexels.com/photos/7176076/pexels-photo-7176076.jpeg",
     title: "Konsultacje psychologiczne",
     description:
-      "Konsultacja psychologiczna to spotkanie, podczas którego zrozumiesz swoje wyzwania i kontekst sytuacyjny wraz z afektami i emocjami im towarzyszącymi, a także wypracujemy wspólnie rozwiązanie oraz konkretny plan działania.",
+      "Konsultacja psychologiczna to spotkanie, podczas którego zrozumiesz swoje wyzwania i kontekst sytuacyjny wraz z afektami i emocjami im towarzyszącymi. Wspólnie wypracujemy  rozwiązanie oraz konkretny plan działania.",
     href: "/offer/konsultacje-psychologiczne",
   },
   {
     image: "https://images.pexels.com/photos/5699418/pexels-photo-5699418.jpeg",
     title: "Psychotraumatologia",
     description:
-      "Jako dyplomowany psycholog i psychotraumatolog zajmuję się leczeniem ciała i umysłu poddanych urazowym doświadczeniom.",
+      "Jako dyplomowany psycholog i psychotraumatolog zajmuję się leczeniem osób z objawami stresu potrauamatycznego.",
     href: "/offer/psychotraumatologia",
   },
   {

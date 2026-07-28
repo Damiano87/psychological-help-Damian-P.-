@@ -3,32 +3,13 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { CARDS, IMAGES } from "@/lib/constants";
+import {
+  CARDS,
+  containerVariants,
+  IMAGES,
+  itemVariants,
+} from "@/lib/constants";
 import MacbethQuote from "@/components/Quote";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.45,
-      delayChildren: 0.1,
-    },
-  },
-} as const;
-
-const itemVariants = {
-  hidden: { opacity: 0, y: -30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 20,
-      damping: 6,
-    },
-  },
-} as const;
 
 export default function Home() {
   return (
@@ -206,78 +187,3 @@ export default function Home() {
     </div>
   );
 }
-
-/* Card 2 */
-
-/* <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
-  <Image
-    src={IMAGES.card2}
-    alt="Psychotraumatologia"
-    fill
-    quality={60}
-    sizes="(max-width: 768px) 100vw, 50vw"
-    className="object-cover transition-transform duration-700 group-hover:scale-105"
-  />
-  <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
-  <div className="relative z-20 text-left">
-    <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
-      Psychotraumatologia
-    </h3>
-    <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
-      Jako dyplomowany psycholog i psychotraumatolog zajmuję się leczeniem ciała
-      i umysłu poddanych urazowym doświadczeniom.
-    </p>
-  </div>
-</div>;
-
-{
-  /* Card 3 */
-
-/* <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
-  <Image
-    src={IMAGES.card3}
-    alt="Terapia TSR"
-    fill
-    quality={60}
-    sizes="(max-width: 768px) 100vw, 50vw"
-    className="object-cover transition-transform duration-700 group-hover:scale-105"
-  />
-  <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
-  <div className="relative z-20 text-left">
-    <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
-      Terapia TSR
-    </h3>
-    <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
-      Jestem terapeutą w trakcie szkolenia w zakresie Terapii Skoncentrowanej na
-      Rozwiązaniach. W swojej pracy wykorzystuję techniki TSR, których celem
-      jest uruchomienie zasobów Klienta, wzmocnienie jego mocnych stron oraz
-      zidentyfikowanie wewnętrznych strategii, które są nieskuteczne i
-      nieadaptacyjne.
-    </p>
-  </div>
-</div>;
-{
-  /* Card 4 */
-
-/* <div className="w-full md:w-[calc(50%-1rem)] max-w-xl aspect-16/10 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer">
-  <Image
-    src={IMAGES.card4}
-    alt="Warsztaty i szkolenia"
-    fill
-    quality={60}
-    sizes="(max-width: 768px) 100vw, 50vw"
-    className="object-cover transition-transform duration-700 group-hover:scale-105"
-  />
-  <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
-  <div className="relative z-20 text-left">
-    <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
-      Warsztaty i szkolenia
-    </h3>
-    <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
-      Przeprowadziłem szereg szkoleń i warsztatów dla rodziców, opiekunów oraz
-      pracowników korporacji i instytucji. Do każdego spotkania ustalam
-      scenariusz indywidualnie, uwzględniając oczekiwania grupy oraz jej
-      dynamikę.
-    </p>
-  </div>
-</div>; */

@@ -15,11 +15,12 @@ export default function AboutMe() {
         {/* Background Image with overlay for readability */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/damian-hero.webp"
+            src="/about.jpg"
             alt="Drzewa"
             fill
             priority
-            className="object-cover object-center"
+            sizes="100vw"
+            className="object-cover object-top"
           />
           <div className="absolute inset-0 bg-neutral-800/40" />
         </div>

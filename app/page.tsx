@@ -39,7 +39,7 @@ export default function Home() {
             variants={itemVariants}
             className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6 drop-shadow-sm max-w-3xl leading-tight"
           >
-            Psychologia zmiany, wzmocnienia i wewnętrznej spójności.
+            Psychologia zmiany, wzmocnienia i wewnętrznej spójki.
           </motion.h1>
 
           <motion.p

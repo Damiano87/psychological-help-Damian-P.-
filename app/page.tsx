@@ -53,7 +53,7 @@ export default function Home() {
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
               href="/offer"

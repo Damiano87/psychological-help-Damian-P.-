@@ -52,8 +52,9 @@ const TSRTherapy = () => {
               <p className="text-neutral-700 text-lg leading-relaxed">
                 Jestem terapeutą w trakcie szkolenia w zakresie Terapii
                 Skoncentrowanej na Rozwiązaniach. W swojej pracy wykorzystuję
-                techniki TSR, których celem jest uruchomienie zasobów Klienta
-                oraz wzmocnienie jego mocnych stron. 
+                techniki TSR, których celem jest uruchomienie zasobów Klienta,
+                wzmocnienie jego mocnych stron oraz raz zidentyfikowanie wewnętrznych 
+                strategii, które są nieskuteczne i nieadaptacyjne.
       
               </p>
 

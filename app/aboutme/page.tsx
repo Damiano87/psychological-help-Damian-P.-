@@ -95,6 +95,7 @@ export default function AboutMe() {
               src={IMAGES.damianAboutMe}
               alt="Zdjęcie profilowe"
               fill
+              loading="lazy"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover"
             />
@@ -153,6 +154,7 @@ export default function AboutMe() {
             src={IMAGES.damianBricks}
             alt="Zdjęcie Damiana Piwowarczyka na tle ceglanej ściany"
             fill
+            loading="lazy"
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover object-center"
           />

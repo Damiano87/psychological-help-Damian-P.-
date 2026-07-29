@@ -115,9 +115,9 @@ const Prices = () => {
                 <span>(online): </span>
                 <strong>180 zł</strong>
 
-                <p className="mt-4 md:mt-10 text-xs sm:text-base space-y-1 md:space-y-3">
-                  Czas trwania do 60 min
-                </p>
+                <ul className="mt-4 md:mt-10 text-xs sm:text-base list-disc pl-6 space-y-1 md:space-y-3">
+                  <li> Czas trwania do 60 min</li>
+                </ul>
               </div>
             </Link>
           </motion.div>
@@ -140,9 +140,9 @@ const Prices = () => {
                   Warsztaty i szkolenia
                 </h3>
 
-                <p className="mt-4 md:mt-10 text-xs sm:text-base space-y-1 md:space-y-3">
-                  Cena ustalana indywidualnie
-                </p>
+                <ul className="mt-4 md:mt-10 text-xs sm:text-base list-disc pl-6 space-y-1 md:space-y-3">
+                  <li>Cena ustalana indywidualnie</li>
+                </ul>
               </div>
             </Link>
           </motion.div>

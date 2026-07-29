@@ -67,15 +67,6 @@ export default function Home() {
       {/* Offer section */}
       <section className="py-20 md:py-28 transition-colors duration-300 font-jost bg-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          {/* <span className="text-2xl font-semibold uppercase tracking-wider text-teal-600">
-            Jak mogę pomóc
-          </span>
-          <p className="text-neutral-600 max-w-2xl mx-auto mt-12 mb-12 md:mb-16 font-roboto leading-relaxed">
-            Dostosowuję metody terapeutyczne do Twoich indywidualnych potrzeb,
-            zapewniając bezpieczną i pełną empatii przestrzeń do rozwoju oraz
-            radzenia sobie z trudnościami.
-          </p> */}
-
           <div className="flex flex-wrap justify-center gap-8">
             {/* Cards */}
             {CARDS?.map((card, index) => {

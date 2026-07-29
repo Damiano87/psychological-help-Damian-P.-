@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import LeftCard from "./_components/LeftCard";
 import RightCard from "./_components/RightCard";
 import BottomSection from "./_components/BottomSection";
-import { containerVariants, itemVariants, IMAGES } from "@/lib/constants";
+import { containerVariants, IMAGES, itemVariants } from "@/lib/constants";
 
 export default function AboutMe() {
   return (
@@ -15,7 +15,7 @@ export default function AboutMe() {
         {/* Background Image with overlay for readability */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/about.jpg"
+            src={IMAGES.aboutMeHero}
             alt="Drzewa"
             fill
             priority
@@ -69,12 +69,12 @@ export default function AboutMe() {
               podstawowych i ponadpodstawowych. Od wielu lat pracuję z rodzicami
               i opiekunami, prowadząc warsztaty oraz indywidualne konsultacje.
               Cały czas poznaję problemy młodych ludzi, przed którymi świat
-              stawia cały wachlarz wyzwań i presji. Wrażliwość
-              współczesnych nastolatków, ich świadomość siebie i inteligencja
-              emocjonalna sprawiają, że coraz trudniej odnaleźć im satysfakcję i
-              sens oraz otoczyć się zdrowymi, wspierającymi relacjami. Czerpię
-              ogromną radość z budowania odporności psychicznej i spójności w
-              dzieciach, młodzieży oraz dorosłych.
+              stawia cały wachlarz wyzwań i presji. Wrażliwość współczesnych
+              nastolatków, ich świadomość siebie i inteligencja emocjonalna
+              sprawiają, że coraz trudniej odnaleźć im satysfakcję i sens oraz
+              otoczyć się zdrowymi, wspierającymi relacjami. Czerpię ogromną
+              radość z budowania odporności psychicznej i spójności w dzieciach,
+              młodzieży oraz dorosłych.
             </p>
             <br />
             <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
@@ -92,7 +92,7 @@ export default function AboutMe() {
           {/* Image container */}
           <div className="shrink-0 w-full max-w-96 sm:max-w-120 aspect-4/5 relative rounded-2xl overflow-hidden flex items-center justify-center">
             <Image
-              src="/damian-aboutme.webp"
+              src={IMAGES.damianAboutMe}
               alt="Zdjęcie profilowe"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -145,6 +145,19 @@ export default function AboutMe() {
         </div>
       </section>
       <BottomSection />
+      {/* Image section */}
+      <section className="flex justify-center mx-4 sm:mx-0 mb-8">
+        {/* Image container */}
+        <div className="shrink-0 w-full max-w-96 sm:max-w-120 aspect-4/5 relative rounded-2xl overflow-hidden flex items-center justify-center">
+          <Image
+            src={IMAGES.damianBricks}
+            alt="Zdjęcie Damiana Piwowarczyka na tle ceglanej ściany"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover object-center"
+          />
+        </div>
+      </section>
     </div>
   );
 }

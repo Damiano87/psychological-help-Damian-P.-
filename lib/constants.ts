@@ -1,6 +1,10 @@
+import AboutMe from "@/app/aboutme/page";
+
 export const IMAGES = {
   homeHero: "/mainbg.webp",
   aboutMeHero: "/about.jpg",
+  damianAboutMe: "/damian-aboutme.webp",
+  damianBricks: "/damian-bricks.webp",
   psychConsultsHero:
     "https://images.pexels.com/photos/7176076/pexels-photo-7176076.jpeg",
   psychTraumatologyHero:

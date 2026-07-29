@@ -25,8 +25,36 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Damian Piwowarczyk - Psycholog",
-  description: "Zapraszam na konsultację psychologiczną",
+  title:
+    "Miejsce spotkań ZMIANA - psycholog, psychotraumatolog Damian Piwowarczyk",
+  icons: {
+    icon: [
+      { rel: "icon", url: "/favicon.ico" },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        url: "/favicon-32x32.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        url: "/favicon-16x16.png",
+      },
+    ],
+    apple: [
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        url: "/apple-touch-icon.png",
+      },
+    ],
+  },
+  other: {
+    "msapplication-TileColor": "#da532c",
+    "msapplication-config": "/browserconfig.xml",
+  },
 };
 
 export default function RootLayout({

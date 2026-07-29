@@ -1,8 +1,7 @@
-import AboutMe from "@/app/aboutme/page";
-
 export const IMAGES = {
   homeHero: "/mainbg.webp",
   aboutMeHero: "/about.jpg",
+  damianHome: "/damian-home.webp",
   damianAboutMe: "/damian-aboutme.webp",
   damianBricks: "/damian-bricks.webp",
   psychConsultsHero:

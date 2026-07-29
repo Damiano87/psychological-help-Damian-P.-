@@ -107,7 +107,7 @@ export default function Home() {
       </section>
       {/* info and image section */}
       <section className="py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center justify-center gap-12 md:gap-16">
           {/* Text content */}
           <div className="flex-1 max-w-xl">
             <div className="inline-block mb-6 relative">
@@ -163,12 +163,12 @@ export default function Home() {
           </div>
 
           {/* Image container */}
-          <div className="shrink-0 w-full max-w-96 sm:max-w-120 aspect-4/5 relative rounded-2xl overflow-hidden flex items-center justify-center">
+          <div className="shrink-0 w-full max-w-96 sm:max-w-120 aspect-4/5 relative rounded-2xl overflow-hidden">
             <Image
-              src="/damian-home.webp"
-              alt="Zdjęcie profilowe"
+              src={IMAGES.damianHome}
+              alt="Zdjęcie Damiana Piwowarczyka"
               fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              sizes="(max-width: 640px) 384px, 480px"
               className="object-cover"
             />
           </div>

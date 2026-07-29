@@ -42,7 +42,7 @@ export default function AboutMe() {
       </section>
       {/* info and image section */}
       <section className="py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center justify-center gap-12 md:gap-16">
           {/* Text content */}
           <div className="flex-1 max-w-xl">
             <div className="inline-block mb-6 relative">
@@ -90,13 +90,13 @@ export default function AboutMe() {
           </div>
 
           {/* Image container */}
-          <div className="shrink-0 w-full max-w-96 sm:max-w-120 aspect-4/5 relative rounded-2xl overflow-hidden flex items-center justify-center">
+          <div className="shrink-0 w-full max-w-96 sm:max-w-120 aspect-4/5 relative rounded-2xl overflow-hidden">
             <Image
               src={IMAGES.damianAboutMe}
               alt="Zdjęcie profilowe"
               fill
               loading="lazy"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              sizes="(max-width: 640px) 384px, 480px"
               className="object-cover"
             />
           </div>
@@ -149,14 +149,14 @@ export default function AboutMe() {
       {/* Image section */}
       <section className="flex justify-center mx-4 sm:mx-0 mb-8">
         {/* Image container */}
-        <div className="shrink-0 w-full max-w-96 sm:max-w-120 aspect-4/5 relative rounded-2xl overflow-hidden flex items-center justify-center">
+        <div className="shrink-0 w-full max-w-96 sm:max-w-120 aspect-4/5 relative rounded-2xl overflow-hidden">
           <Image
             src={IMAGES.damianBricks}
             alt="Zdjęcie Damiana Piwowarczyka na tle ceglanej ściany"
             fill
             loading="lazy"
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover object-center"
+            sizes="(max-width: 640px) 384px, 480px"
+            className="object-cover"
           />
         </div>
       </section>

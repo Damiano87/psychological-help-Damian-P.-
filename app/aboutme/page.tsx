@@ -69,7 +69,7 @@ export default function AboutMe() {
               podstawowych i ponadpodstawowych. Od wielu lat pracuję z rodzicami
               i opiekunami, prowadząc warsztaty oraz indywidualne konsultacje.
               Cały czas poznaję problemy młodych ludzi, przed którymi świat
-              stawia cały skomplikowany wachlarz wyzwań i presji. Wrażliwość
+              stawia cały wachlarz wyzwań i presji. Wrażliwość
               współczesnych nastolatków, ich świadomość siebie i inteligencja
               emocjonalna sprawiają, że coraz trudniej odnaleźć im satysfakcję i
               sens oraz otoczyć się zdrowymi, wspierającymi relacjami. Czerpię

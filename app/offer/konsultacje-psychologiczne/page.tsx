@@ -52,8 +52,8 @@ const PsychologicalConsultations = () => {
               <p className="text-neutral-700 text-lg leading-relaxed">
                 Konsultacja psychologiczna to spotkanie, podczas którego
                 zrozumiesz swoje wyzwania i kontekst sytuacyjny wraz z afektami
-                i emocjami im towarzyszącymi. Wspólnie wypracujemy rozwiązanie
-                oraz konkretny plan działania.
+                im towarzyszącymi. Wspólnie wypracujemy rozwiązanie oraz konkretny plan działania. 
+
               </p>
 
               {/* <p className="text-neutral-700 text-lg leading-relaxed">

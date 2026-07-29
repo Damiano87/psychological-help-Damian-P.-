@@ -55,7 +55,7 @@ const Prices = () => {
                   Konsultacje psychologiczne
                 </h3>
                 <span>(online): </span>
-                <strong>150 zł</strong>
+                <strong>200 zł</strong>
 
                 <ul className="mt-4 md:mt-10 text-xs sm:text-base list-disc pl-6 space-y-1 md:space-y-3">
                   <li> Czas trwania do 50 min</li>

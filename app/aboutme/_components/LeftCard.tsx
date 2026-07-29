@@ -20,8 +20,8 @@ export default function PsychologicalPillar() {
         <div className="overflow-hidden">
           <p className="text-md md:text-lg leading-relaxed text-neutral-600">
             Jakościowa ścieżka edukacyjna w postaci studiów psychologicznych na
-            KUL JP II zapewniła mi solidne doświadczenie oraz wyposażyła w
-            konkretne narzędzia diagnostyczne. Jestem dyplomowanym
+            KUL JP II zapewniła mi wartościowe doświadczenie oraz wyposażyła w rzetelne
+            narzędzia diagnostyczne. Jestem dyplomowanym
             psychotraumatologiem, zajmującym się leczeniem skutków doświadczeń
             traumatycznych. Posiadam także kwalifikacje do badania kierowców pod
             kątem zdolności psychomotorycznych oraz predyspozycji

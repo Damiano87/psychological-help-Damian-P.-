@@ -16,7 +16,7 @@ export const CARDS = [
     image: "https://images.pexels.com/photos/7176076/pexels-photo-7176076.jpeg",
     title: "Konsultacje psychologiczne",
     description:
-      "Konsultacja psychologiczna to spotkanie, podczas którego zrozumiesz swoje wyzwania i kontekst sytuacyjny wraz z afektami i emocjami im towarzyszącymi. Wspólnie wypracujemy  rozwiązanie oraz konkretny plan działania.",
+      "Konsultacja psychologiczna to spotkanie, podczas którego zrozumiesz swoje wyzwania i kontekst sytuacyjny wraz z afektami im towarzyszącymi.",
     href: "/offer/konsultacje-psychologiczne",
   },
   {
@@ -30,7 +30,7 @@ export const CARDS = [
     image: "https://images.pexels.com/photos/1073054/pexels-photo-1073054.jpeg",
     title: "Terapia TSR",
     description:
-      "Jestem terapeutą w trakcie szkolenia w zakresie Terapii Skoncentrowanej na Rozwiązaniach. W swojej pracy wykorzystuję techniki TSR, których celem jest uruchomienie zasobów Klienta, wzmocnienie jego mocnych stron oraz zidentyfikowanie wewnętrznych strategii, które są nieskuteczne i nieadaptacyjne.",
+      "Jestem terapeutą w trakcie szkolenia w zakresie Terapii Skoncentrowanej na Rozwiązaniach. W swojej pracy wykorzystuję techniki TSR, których celem jest uruchomienie zasobów Klienta.",
     href: "/offer/terapia-tsr",
   },
   {

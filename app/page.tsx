@@ -67,14 +67,14 @@ export default function Home() {
       {/* Offer section */}
       <section className="py-20 md:py-28 transition-colors duration-300 font-jost bg-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <span className="text-2xl font-semibold uppercase tracking-wider text-teal-600">
+          {/* <span className="text-2xl font-semibold uppercase tracking-wider text-teal-600">
             Jak mogę pomóc
           </span>
           <p className="text-neutral-600 max-w-2xl mx-auto mt-12 mb-12 md:mb-16 font-roboto leading-relaxed">
             Dostosowuję metody terapeutyczne do Twoich indywidualnych potrzeb,
             zapewniając bezpieczną i pełną empatii przestrzeń do rozwoju oraz
             radzenia sobie z trudnościami.
-          </p>
+          </p> */}
 
           <div className="flex flex-wrap justify-center gap-8">
             {/* Cards */}
@@ -83,7 +83,7 @@ export default function Home() {
                 <Link
                   key={index}
                   href={card.href}
-                  className="w-full md:w-[calc(50%-1rem)] max-w-xl min-h-60 sm:min-h-85 relative rounded-3xl overflow-hidden  border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer"
+                  className="w-full md:w-[calc(50%-1rem)] max-w-xl min-h-60 sm:min-h-85 relative rounded-3xl overflow-hidden  border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end sm:justify-start p-6 sm:p-10 group cursor-pointer"
                 >
                   <div>
                     <Image
@@ -99,7 +99,7 @@ export default function Home() {
                       }`}
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
-                    <div className="relative z-20 text-left">
+                    <div className="relative sm:mt-14 z-20 text-left">
                       <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
                         {card.title}
                       </h3>

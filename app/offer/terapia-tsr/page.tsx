@@ -89,8 +89,8 @@ const TSRTherapy = () => {
             >
               <div className="relative w-full max-w-sm aspect-4/5 rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.pexels.com/photos/38668149/pexels-photo-38668149.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Kłębek wełny"
+                  src="https://images.pexels.com/photos/7176291/pexels-photo-7176291.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Dwie osoby w trakcie rozmowy"
                   fill
                   loading="lazy"
                   sizes="(max-width: 1024px) 90vw, 400px"

@@ -23,7 +23,7 @@ export const CARDS = [
     image: "https://images.pexels.com/photos/5699418/pexels-photo-5699418.jpeg",
     title: "Psychotraumatologia",
     description:
-      "Jako dyplomowany psycholog i psychotraumatolog zajmuję się leczeniem osób z objawami stresu potrauamatycznego.",
+      "Jako dyplomowany psycholog i psychotraumatolog zajmuję się leczeniem osób z objawami stresu pourazowego.",
     href: "/offer/psychotraumatologia",
   },
   {

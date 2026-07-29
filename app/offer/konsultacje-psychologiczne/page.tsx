@@ -96,8 +96,8 @@ const PsychologicalConsultations = () => {
             >
               <div className="relative w-full max-w-sm aspect-4/5 rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.pexels.com/photos/7176320/pexels-photo-7176320.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Konsultacja psychologiczna"
+                  src="https://images.pexels.com/photos/7176036/pexels-photo-7176036.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Dwie osoby w trakcie rozmowy"
                   fill
                   className="object-cover object-center"
                 />

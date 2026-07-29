@@ -113,7 +113,7 @@ const Prices = () => {
                   Terapia TSR
                 </h3>
                 <span>(online): </span>
-                <strong>150 zł</strong>
+                <strong>180 zł</strong>
 
                 <p className="mt-4 md:mt-10 text-xs sm:text-base space-y-1 md:space-y-3">
                   Czas trwania do 60 min

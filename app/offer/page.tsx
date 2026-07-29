@@ -39,7 +39,7 @@ export default function Offer() {
               <Link
                 key={index}
                 href={card.href}
-                className="w-full md:w-[calc(50%-1rem)] max-w-xl min-h-60 sm:min-h-85 relative rounded-3xl overflow-hidden shadow-lg border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end p-6 sm:p-10 group cursor-pointer"
+                className="w-full md:w-[calc(50%-1rem)] max-w-xl min-h-60 sm:min-h-85 relative rounded-3xl overflow-hidden  border border-neutral-100 dark:border-neutral-800 flex flex-col justify-end sm:justify-start p-6 sm:p-10 group cursor-pointer"
               >
                 <div>
                   <Image
@@ -55,7 +55,7 @@ export default function Offer() {
                     }`}
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
-                  <div className="relative z-20 text-left">
+                  <div className="relative sm:mt-14 z-20 text-left">
                     <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
                       {card.title}
                     </h3>

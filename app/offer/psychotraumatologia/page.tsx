@@ -86,8 +86,8 @@ const Psychotraumatology = () => {
             >
               <div className="relative w-full max-w-sm aspect-4/5 rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.pexels.com/photos/1974508/pexels-photo-1974508.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Uspokajająca roślina doniczkowa"
+                  src="https://images.pexels.com/photos/18663603/pexels-photo-18663603.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Uspokajająca roślina oświetlona przez słońce"
                   fill
                   loading="lazy"
                   sizes="(max-width: 1024px) 90vw, 400px"

@@ -53,7 +53,7 @@ const Contact = () => {
             <div>
               <p className="text-xs text-neutral-500 font-roboto">Telefon</p>
               <p className="text-base font-semibold text-neutral-800 font-roboto">
-                +48 512 345 678
+                +48 881 720 676
               </p>
             </div>
           </div>
@@ -77,7 +77,7 @@ const Contact = () => {
             <div>
               <p className="text-xs text-neutral-500 font-roboto">E-mail</p>
               <p className="text-[.85rem] sm:text-base font-semibold text-neutral-800 font-roboto">
-                kontakt@damianpiwowarczyk.pl
+                dampiwowarczyk@gmail.com
               </p>
             </div>
           </div>

@@ -49,11 +49,10 @@ const Workshops = () => {
               className="flex flex-col gap-6"
             >
               <p className="text-neutral-700 text-lg leading-relaxed">
-                Przeprowadziłem szereg szkoleń i warsztatów dla rodziców,
-                opiekunów oraz pracowników korporacji i instytucji. Do każdego
-                spotkania ustalam scenariusz indywidualnie, uwzględniając
-                oczekiwania grupy oraz jej dynamikę. Niektóre z tematów, szkoleń
-                które do tej pory zrealizowałem: lista
+                Przeprowadziłem szereg szkoleń i&nbsp;warsztatów dla rodziców,
+                opiekunów oraz pracowników korporacji i&nbsp;instytucji. Do
+                każdego spotkania ustalam scenariusz indywidualnie,
+                uwzględniając oczekiwania grupy oraz jej dynamikę.
               </p>
             </motion.div>
 
@@ -67,8 +66,8 @@ const Workshops = () => {
             >
               <div className="relative w-full max-w-sm aspect-4/5 rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.pexels.com/photos/38387671/pexels-photo-38387671.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Kłębek wełny"
+                  src="https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Grupa osób trzymających się za ręce"
                   fill
                   loading="lazy"
                   sizes="(max-width: 1024px) 90vw, 400px"

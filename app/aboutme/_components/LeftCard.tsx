@@ -26,7 +26,7 @@ export default function PsychologicalPillar() {
             traumatycznych. Posiadam także kwalifikacje do badania kierowców pod
             kątem zdolności psychomotorycznych oraz predyspozycji
             psychologicznych. Jestem w trakcie szkolenia w zakresie Terapii
-            Skoncentrowanej na Rozwiązaniu (TSR), która jest skuteczną
+            Skoncentrowanej na Rozwiązaniach (TSR), która jest skuteczną
             odpowiedzią na dzisiejsze czasy – krótkoterminową, konkretną i o
             solidnej strukturze.
           </p>

@@ -50,7 +50,7 @@ const Psychotraumatology = () => {
             >
               <p className="text-neutral-700 text-lg leading-relaxed">
                 Jako dyplomowany psycholog i psychotraumatolog zajmuję się
-                leczeniem osób z objawami stresu potrauamatycznego. Zrozumienie
+                leczeniem osób z objawami stresu pourazowego. Zrozumienie
                 tego, jak mózg i ciało przetwarzają sytuacje traumatyczne, jest
                 kluczowe dla zastosowania odpowiednich metod terapeutycznych.
                 Każdorazowo dostosowuję sposób działania do konkretnego

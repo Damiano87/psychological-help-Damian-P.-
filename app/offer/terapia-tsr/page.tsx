@@ -53,9 +53,8 @@ const TSRTherapy = () => {
                 Jestem terapeutą w trakcie szkolenia w zakresie Terapii
                 Skoncentrowanej na Rozwiązaniach. W swojej pracy wykorzystuję
                 techniki TSR, których celem jest uruchomienie zasobów Klienta,
-                wzmocnienie jego mocnych stron oraz raz zidentyfikowanie wewnętrznych 
-                strategii, które są nieskuteczne i nieadaptacyjne.
-      
+                wzmocnienie jego mocnych stron oraz raz zidentyfikowanie
+                wewnętrznych strategii, które są nieskuteczne i nieadaptacyjne.
               </p>
 
               {/* <div className="flex flex-col gap-2 pt-2">
@@ -94,7 +93,7 @@ const TSRTherapy = () => {
                   alt="Dwie osoby w trakcie rozmowy"
                   fill
                   loading="lazy"
-                  sizes="(max-width: 1024px) 90vw, 400px"
+                  sizes="(max-width: 640px) 384px, 480px"
                   className="object-cover object-center"
                 />
               </div>

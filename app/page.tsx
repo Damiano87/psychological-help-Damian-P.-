@@ -46,8 +46,8 @@ export default function Home() {
             variants={itemVariants}
             className="text-lg sm:text-xl text-neutral-200 mb-10 max-w-2xl leading-relaxed drop-shadow-sm"
           >
-            Szukam praktycznych rozwiązań przynoszących realne efekty w poprawie
-            jakości życia oraz w przywróceniu równowagi oraz dobrostanu
+            Pomagam znaleźć praktyczne rozwiązania przynoszące realne efekty w
+            poprawie jakości życia oraz w przywróceniu równowagi i dobrostanu
             psychicznego.
           </motion.p>
 

@@ -70,7 +70,7 @@ const Workshops = () => {
                   alt="Grupa osób trzymających się za ręce"
                   fill
                   loading="lazy"
-                  sizes="(max-width: 1024px) 90vw, 400px"
+                  sizes="(max-width: 640px) 384px, 480px"
                   className="object-cover object-center"
                 />
               </div>

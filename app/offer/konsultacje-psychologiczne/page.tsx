@@ -8,7 +8,7 @@ const PsychologicalConsultations = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[calc(100dvh-4rem)] sm:min-h-[calc(100dvh-5rem)] w-full flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] w-full flex flex-col items-center justify-center overflow-hidden">
         {/* Background Image with overlay for readability */}
         <div className="absolute inset-0 -z-10">
           <Image
@@ -52,8 +52,8 @@ const PsychologicalConsultations = () => {
               <p className="text-neutral-700 text-lg leading-relaxed">
                 Konsultacja psychologiczna to spotkanie, podczas którego
                 zrozumiesz swoje wyzwania i kontekst sytuacyjny wraz z afektami
-                im towarzyszącymi. Wspólnie wypracujemy rozwiązanie oraz konkretny plan działania. 
-
+                im towarzyszącymi. Wspólnie wypracujemy rozwiązanie oraz
+                konkretny plan działania.
               </p>
 
               {/* <p className="text-neutral-700 text-lg leading-relaxed">
@@ -99,6 +99,8 @@ const PsychologicalConsultations = () => {
                   src="https://images.pexels.com/photos/7176036/pexels-photo-7176036.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Dwie osoby w trakcie rozmowy"
                   fill
+                  loading="lazy"
+                  sizes="(max-width: 640px) 384px, 480px"
                   className="object-cover object-center"
                 />
               </div>

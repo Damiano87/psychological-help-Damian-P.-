@@ -1,15 +1,9 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
 import Link from "next/link";
-import {
-  CARDS,
-  containerVariants,
-  IMAGES,
-  itemVariants,
-} from "@/lib/constants";
+import { CARDS, IMAGES } from "@/lib/constants";
 import MacbethQuote from "@/components/Quote";
+import AnimatedHeroContent from "@/components/AnimatedHeroContent";
+import UnderlineAnimation from "@/components/UnderlineAnimation";
 
 export default function Home() {
   return (
@@ -23,46 +17,15 @@ export default function Home() {
             alt="Psychologiczna pomoc i wsparcie"
             fill
             priority
+            quality={60}
+            sizes="100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-neutral-700/40 " />
         </div>
 
-        {/* Hero Content */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="relative z-10 px-4 max-w-7xl mx-auto sm:mt-20 flex flex-col items-start"
-        >
-          <motion.h1
-            variants={itemVariants}
-            className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6 drop-shadow-sm max-w-3xl leading-tight"
-          >
-            Psychologia zmiany, wzmocnienia i wewnętrznej spójności.
-          </motion.h1>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-lg sm:text-xl text-neutral-200 mb-10 max-w-2xl leading-relaxed drop-shadow-sm"
-          >
-            Pomagam znaleźć praktyczne rozwiązania przynoszące realne efekty w
-            poprawie jakości życia oraz w przywróceniu równowagi i dobrostanu
-            psychicznego.
-          </motion.p>
-
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Link
-              href="/offer"
-              className="inline-flex items-center justify-center px-4 py-2 sm:px-8 sm:py-3.5 rounded-full text-xs sm:text-base font-semibold text-white bg-white/10 hover:bg-white/20 active:bg-white/5 border border-white/20 backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-200"
-            >
-              Dowiedz się więcej
-            </Link>
-          </motion.div>
-        </motion.div>
+        {/* Hero Content (It's client component) */}
+        <AnimatedHeroContent />
       </section>
       {/* Offer section */}
       <section className="py-20 md:py-28 transition-colors duration-300 font-jost bg-teal-50">
@@ -114,13 +77,8 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-bold font-roboto">
                 Damian Piwowarczyk
               </h2>
-              <motion.div
-                className="h-1 bg-teal-600 rounded-full mt-1.5"
-                initial={{ width: 0 }}
-                whileInView={{ width: "110%" }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-              />
+              {/* UnderlineAnimation, (It's client component) */}
+              <UnderlineAnimation />
             </div>
             <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
               <span className="float-left text-4xl sm:text-5xl leading-none pr-3 mt-1">
@@ -152,7 +110,7 @@ export default function Home() {
               wymiernych efektach, a także uruchamiając zasoby Klienta oraz jego
               naturalną odporność psychiczną. Łączę techniki terapii werbalnej z
               pracą z ciałem, stale pogłębiając wiedzę o funkcjonowaniu
-              człowieka, jego jaźni, psychiki i ciała.
+              człowieka, jego jaźni, psychiki dan ciała.
             </p>
             <Link
               className="inline-block text-teal-600 border border-teal-600 hover:text-white hover:bg-teal-600 duration-300 px-4 py-2 mt-10 rounded-md text-lg font-jost"

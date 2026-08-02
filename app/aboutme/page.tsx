@@ -1,11 +1,31 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import LeftCard from "./_components/LeftCard";
 import RightCard from "./_components/RightCard";
 import BottomSection from "./_components/BottomSection";
-import { containerVariants, IMAGES, itemVariants } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
+import AnimatedHeroContentAbout from "./_components/AnimatedHeroContentAbout";
+import UnderlineAnimation from "@/components/UnderlineAnimation";
+
+export const metadata: Metadata = {
+  title: "O mnie - Damian Piwowarczyk",
+  description:
+    "Poznaj moją ścieżkę zawodową i doświadczenie. Dyplomowany psycholog (KUL JP II), psychotraumatolog i terapeuta TSR z wieloletnim doświadczeniem.",
+  keywords: [
+    "Damian Piwowarczyk",
+    "o mnie",
+    "doświadczenie psycholog",
+    "psychotraumatolog KUL",
+    "terapeuta TSR",
+    "ścieżka zawodowa psycholog",
+  ],
+  openGraph: {
+    title: "O mnie - Damian Piwowarczyk | Psycholog i Psychotraumatolog",
+    description:
+      "Poznaj moje doświadczenie zawodowe, wykształcenie i podejście terapeutyczne w Miejscu spotkań ZMIANA.",
+    url: "/aboutme",
+  },
+};
 
 export default function AboutMe() {
   return (
@@ -19,26 +39,15 @@ export default function AboutMe() {
             alt="Drzewa"
             fill
             priority
+            quality={60}
             sizes="100vw"
             className="object-cover object-top"
           />
           <div className="absolute inset-0 bg-neutral-800/40" />
         </div>
 
-        {/* Content */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center"
-        >
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl sm:text-7xl font-bold tracking-tight text-white mb-6 drop-shadow-sm leading-tight font-jost"
-          >
-            Damian Piwowarczyk
-          </motion.h1>
-        </motion.div>
+        {/* Content (its client component) */}
+        <AnimatedHeroContentAbout />
       </section>
       {/* info and image section */}
       <section className="py-16 md:py-24">
@@ -47,13 +56,8 @@ export default function AboutMe() {
           <div className="flex-1 max-w-xl">
             <div className="inline-block mb-6 relative">
               <h2 className="text-3xl font-bold font-roboto">O mnie</h2>
-              <motion.div
-                className="h-1 bg-teal-600 rounded-full mt-1.5"
-                initial={{ width: 0 }}
-                whileInView={{ width: "120%" }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-              />
+              {/* UnderlineAnimation (its client component) */}
+              <UnderlineAnimation width="120%" />
             </div>
             <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
               <span className="float-left text-5xl leading-none pr-3 mt-1">
@@ -109,13 +113,8 @@ export default function AboutMe() {
             <h3 className="font-roboto text-xl sm:text-3xl font-bold">
               Moja ścieżka zawodowa
             </h3>
-            <motion.div
-              className="h-1 bg-teal-600 rounded-full mt-1.5"
-              initial={{ width: 0 }}
-              whileInView={{ width: "110%" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            />
+            {/* UnderlineAnimation (its client component) */}
+            <UnderlineAnimation />
           </div>
           <p className="font-roboto text-sm sm:text-lg leading-relaxed text-neutral-600 mb-6">
             <span className="float-left text-5xl leading-none pr-3 mt-1">
@@ -145,6 +144,7 @@ export default function AboutMe() {
           <RightCard />
         </div>
       </section>
+      {/* It's client component */}
       <BottomSection />
       {/* Image section */}
       <section className="flex justify-center mx-4 sm:mx-0 mb-8">

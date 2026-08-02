@@ -26,8 +26,49 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Miejsce spotkań ZMIANA - psycholog, psychotraumatolog Damian Piwowarczyk",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_URL || "https://miejscespotkanzmiana.pl",
+  ),
+  title: {
+    default:
+      "Miejsce spotkań ZMIANA | Damian Piwowarczyk - Psycholog, Psychotraumatolog",
+    template: "%s | Miejsce spotkań ZMIANA - Damian Piwowarczyk",
+  },
+  description:
+    "Gabinet psychologiczny Miejsce spotkań ZMIANA - Damian Piwowarczyk. Konsultacje psychologiczne, psychotraumatologia, terapia TSR oraz warsztaty i szkolenia.",
+  keywords: [
+    "psycholog",
+    "psychotraumatolog",
+    "terapia TSR",
+    "konsultacje psychologiczne",
+    "stres pourazowy",
+    "pomoc psychologiczna",
+    "Damian Piwowarczyk",
+    "Miejsce spotkań ZMIANA",
+    "Ostrowiec Świętokrzyski",
+    "Ostrowiec",
+  ],
+  authors: [{ name: "Damian Piwowarczyk" }],
+  creator: "Damian Piwowarczyk",
+  openGraph: {
+    type: "website",
+    locale: "pl_PL",
+    siteName: "Miejsce spotkań ZMIANA - Damian Piwowarczyk",
+    title:
+      "Miejsce spotkań ZMIANA | Damian Piwowarczyk - Psycholog, Psychotraumatolog",
+    description:
+      "Profesjonalna pomoc psychologiczna, psychotraumatologia, terapia TSR oraz warsztaty. Przywracanie równowagi i dobrostanu psychicznego.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Miejsce spotkań ZMIANA | Damian Piwowarczyk",
+    description:
+      "Profesjonalna pomoc psychologiczna, psychotraumatologia i terapia TSR.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: [
       { rel: "icon", url: "/favicon.ico" },
@@ -65,7 +106,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pl"
       className={`${geistSans.variable} ${geistMono.variable} ${jost.variable} ${roboto.variable} h-full antialiased`}
     >
       <body className="min-h-full">

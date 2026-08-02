@@ -6,12 +6,6 @@ import { useActionState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { contactSchema } from "./contactSchema";
 
-// function requireEnv(key: string): string {
-//   const value = process.env[key];
-//   if (!value) throw new Error(`Brak wymaganej zmiennej środowiskowej: ${key}`);
-//   return value;
-// }
-
 const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;

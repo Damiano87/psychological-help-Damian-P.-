@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CARDS, IMAGES } from "@/lib/constants";
+import homeHero from "@/public/mainbg.webp";
 import MacbethQuote from "@/components/Quote";
 import AnimatedHeroContent from "@/components/AnimatedHeroContent";
 import UnderlineAnimation from "@/components/UnderlineAnimation";
@@ -13,13 +14,16 @@ export default function Home() {
         {/* Background Image with overlay for readability */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src={IMAGES.homeHero}
+            src={homeHero}
             alt="Psychologiczna pomoc i wsparcie"
             fill
-            priority
+            fetchPriority="high"
+            loading="eager"
             quality={60}
             sizes="100vw"
-            className="object-cover"
+            style={{
+              objectFit: "cover",
+            }}
           />
           <div className="absolute inset-0 bg-neutral-700/40 " />
         </div>
@@ -44,6 +48,7 @@ export default function Home() {
                       src={card.image}
                       alt={card.title}
                       fill
+                      loading={index === 0 ? "eager" : "lazy"}
                       quality={60}
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className={`object-cover transition-transform duration-700 ${

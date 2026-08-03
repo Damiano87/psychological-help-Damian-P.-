@@ -38,7 +38,7 @@ export default function AboutMe() {
             src={IMAGES.aboutMeHero}
             alt="Drzewa"
             fill
-            priority
+            preload
             quality={60}
             sizes="100vw"
             className="object-cover object-top"

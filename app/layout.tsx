@@ -29,13 +29,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_URL || "https://miejscespotkanzmiana.pl",
   ),
+  alternates: {
+    canonical: "https://miejscespotkanzmiana.pl",
+  },
   title: {
-    default:
-      "Miejsce spotkań ZMIANA | Damian Piwowarczyk - Psycholog, Psychotraumatolog",
+    default: "Miejsce spotkań ZMIANA | Damian Piwowarczyk - Psycholog",
     template: "%s | Miejsce spotkań ZMIANA - Damian Piwowarczyk",
   },
   description:
-    "Gabinet psychologiczny Miejsce spotkań ZMIANA - Damian Piwowarczyk. Konsultacje psychologiczne, psychotraumatologia, terapia TSR oraz warsztaty i szkolenia.",
+    "Konsultacje psychologiczne, psychotraumatologia, terapia TSR oraz warsztaty i szkolenia.",
   keywords: [
     "psycholog",
     "psychotraumatolog",
@@ -75,15 +77,15 @@ export const metadata: Metadata = {
       {
         rel: "icon",
         type: "image/png",
-        sizes: "32x32",
-        url: "/favicon-32x32.png",
+        sizes: "256x256",
+        url: "/favicon-256x256.png",
       },
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "16x16",
-        url: "/favicon-16x16.png",
-      },
+      // {
+      //   rel: "icon",
+      //   type: "image/png",
+      //   sizes: "16x16",
+      //   url: "/favicon-16x16.png",
+      // },
     ],
     apple: [
       {

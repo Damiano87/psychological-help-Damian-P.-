@@ -8,7 +8,7 @@ const ConsultationsContent = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] w-full flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] w-full flex flex-col items-center justify-center overflow-hidden">
         {/* Background Image with overlay for readability */}
         <div className="absolute w-full h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)] -z-10">
           <Image

@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import logo from "@/public/logozmiana.webp";
+import Image from "next/image";
 
 interface NavLink {
   label: string;
@@ -86,20 +88,15 @@ export default function Navbar() {
           {/* Logo / Brand */}
           <div className="shrink-0">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-xl bg-teal-500/10 dark:bg-teal-400/10 flex items-center justify-center text-teal-600 dark:text-teal-400 group-hover:scale-105 transition-transform duration-300">
-                {/* SVG Leaf icon representing Calm & Growth */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-5 h-5"
-                >
-                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 0 9.5a7 7 0 0 1-8 8.5zm0 0v-8" />
-                </svg>
+              <div className="sm:w-12.5 sm:h-12.5 w-9 h-9 relative flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                {/* Logo */}
+                <Image
+                  src={logo}
+                  fill
+                  alt="Logo"
+                  sizes="(max-width: 640px) 36px, 50px"
+                  className="object-contain"
+                />
               </div>
               <span className="text-sm md:text-lg lg:text-xl font-bold tracking-tight text-neutral-800">
                 Miejsce spotkań <span className="text-teal-600">ZMIANA</span>
@@ -118,7 +115,7 @@ export default function Navbar() {
                   onClick={() => handleLinkClick(link.href)}
                   className={`text-sm uppercase font-medium tracking-wide transition-colors duration-200 ${
                     active
-                      ? "text-teal-600 dark:text-teal-400 font-semibold"
+                      ? "text-teal-600 font-semibold"
                       : "text-neutral-800 hover:text-teal-600"
                   }`}
                 >

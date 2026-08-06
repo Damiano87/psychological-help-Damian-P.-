@@ -45,14 +45,15 @@ const PricesContent = () => {
                 src={images[0]}
                 alt="Konsultacje psychologiczne"
                 fill
+                placeholder="blur"
                 sizes="(max-w-768px) calc(100vw - 48px), 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
               <div className="relative z-20 text-left">
-                <h3 className="text-md sm:text-3xl font-bold font-jost mb-2 group-hover:text-teal-300 transition-colors duration-300">
+                <h2 className="text-md sm:text-3xl font-bold font-jost mb-2 group-hover:text-teal-300 transition-colors duration-300">
                   Konsultacje psychologiczne
-                </h3>
+                </h2>
                 <span>(online): </span>
                 <strong>200 zł</strong>
 
@@ -74,14 +75,15 @@ const PricesContent = () => {
                 src={images[1]}
                 alt="Psychotraumatologia"
                 fill
+                placeholder="blur"
                 sizes="(max-w-768px) calc(100vw - 48px), 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
               <div className="relative z-20 text-left">
-                <h3 className="text-md sm:text-3xl font-bold font-jost mb-2 group-hover:text-teal-300 transition-colors duration-300">
+                <h2 className="text-md sm:text-3xl font-bold font-jost mb-2 group-hover:text-teal-300 transition-colors duration-300">
                   Psychotraumatologia
-                </h3>
+                </h2>
                 <span>(online): </span>
                 <strong>200 zł</strong>
 
@@ -103,14 +105,15 @@ const PricesContent = () => {
                 src={images[2]}
                 alt="Terapia TSR"
                 fill
+                placeholder="blur"
                 sizes="(max-w-768px) calc(100vw - 48px), 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
               <div className="relative z-20 text-left">
-                <h3 className="text-xl sm:text-3xl font-bold font-jost mb-2 group-hover:text-teal-300 transition-colors duration-300">
+                <h2 className="text-xl sm:text-3xl font-bold font-jost mb-2 group-hover:text-teal-300 transition-colors duration-300">
                   Terapia TSR
-                </h3>
+                </h2>
                 <span>(online): </span>
                 <strong>180 zł</strong>
 
@@ -130,14 +133,15 @@ const PricesContent = () => {
                 src={images[3]}
                 alt="Warsztaty i szkolenia"
                 fill
+                placeholder="blur"
                 sizes="(max-w-768px) calc(100vw - 48px), 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
               <div className="relative z-20 text-left">
-                <h3 className="text-xl sm:text-3xl font-bold font-jost mb-2 group-hover:text-teal-300 transition-colors duration-300">
+                <h2 className="text-xl sm:text-3xl font-bold font-jost mb-2 group-hover:text-teal-300 transition-colors duration-300">
                   Warsztaty i szkolenia
-                </h3>
+                </h2>
 
                 <ul className="mt-4 md:mt-10 text-xs sm:text-base list-disc pl-6 space-y-1 md:space-y-3">
                   <li>Cena ustalana indywidualnie</li>

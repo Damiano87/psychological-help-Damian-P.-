@@ -7,21 +7,21 @@ import { motion } from "framer-motion";
 const AnimatedHeroContent = () => {
   return (
     <motion.div
+      className="relative z-10 px-4 max-w-7xl mx-auto sm:mt-20 flex flex-col items-start"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="relative z-10 px-4 max-w-7xl mx-auto sm:mt-20 flex flex-col items-start"
     >
       <motion.h1
-        variants={itemVariants}
         className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6 drop-shadow-sm max-w-3xl leading-tight"
+        variants={itemVariants}
       >
         Psychologia zmiany, wzmocnienia i wewnętrznej spójności.
       </motion.h1>
 
       <motion.p
-        variants={itemVariants}
         className="text-lg sm:text-xl text-neutral-200 mb-10 max-w-2xl leading-relaxed drop-shadow-sm"
+        variants={itemVariants}
       >
         Pomagam znaleźć praktyczne rozwiązania przynoszące realne efekty w
         poprawie jakości życia oraz w przywróceniu równowagi i dobrostanu
@@ -29,8 +29,8 @@ const AnimatedHeroContent = () => {
       </motion.p>
 
       <motion.div
-        variants={itemVariants}
         className="flex flex-col sm:flex-row gap-4 justify-center"
+        variants={itemVariants}
       >
         <Link
           href="/offer"

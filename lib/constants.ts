@@ -1,43 +1,44 @@
+import consult from "../public/consultations.webp";
+import trauma from "../public/traumatology.webp";
+import tsr from "../public/tsrtherapy.webp";
+import workshops from "../public/workshops.webp";
+
 export const IMAGES = {
   homeHero: "/mainbg.webp",
   aboutMeHero: "/about.jpg",
   damianHome: "/damian-home.webp",
   damianAboutMe: "/damian-aboutme.webp",
   damianBricks: "/damian-bricks.webp",
-  psychConsultsHero:
-    "https://images.pexels.com/photos/7176076/pexels-photo-7176076.jpeg",
-  psychTraumatologyHero:
-    "https://images.pexels.com/photos/5699418/pexels-photo-5699418.jpeg",
-  tsrTherapyHero:
-    "https://images.pexels.com/photos/1073054/pexels-photo-1073054.jpeg",
-  workshopsHero:
-    "https://images.pexels.com/photos/3931562/pexels-photo-3931562.jpeg",
+  psychConsultsHero: consult,
+  psychTraumatologyHero: trauma,
+  tsrTherapyHero: tsr,
+  workshopsHero: workshops,
 } as const;
 
 export const CARDS = [
   {
-    image: "https://images.pexels.com/photos/7176076/pexels-photo-7176076.jpeg",
+    image: consult,
     title: "Konsultacje psychologiczne",
     description:
       "Konsultacja psychologiczna to spotkanie, podczas którego zrozumiesz swoje wyzwania i kontekst sytuacyjny wraz z afektami im towarzyszącymi.",
     href: "/offer/konsultacje-psychologiczne",
   },
   {
-    image: "https://images.pexels.com/photos/5699418/pexels-photo-5699418.jpeg",
+    image: trauma,
     title: "Psychotraumatologia",
     description:
       "Jako dyplomowany psycholog i psychotraumatolog zajmuję się leczeniem osób z objawami stresu pourazowego.",
     href: "/offer/psychotraumatologia",
   },
   {
-    image: "https://images.pexels.com/photos/1073054/pexels-photo-1073054.jpeg",
+    image: tsr,
     title: "Terapia TSR",
     description:
       "Jestem terapeutą w trakcie szkolenia w zakresie Terapii Skoncentrowanej na Rozwiązaniach. W swojej pracy wykorzystuję techniki TSR, których celem jest uruchomienie zasobów Klienta.",
     href: "/offer/terapia-tsr",
   },
   {
-    image: "https://images.pexels.com/photos/3931562/pexels-photo-3931562.jpeg",
+    image: workshops,
     title: "Warsztaty i szkolenia",
     description:
       "Przeprowadziłem szereg szkoleń i warsztatów dla rodziców, opiekunów oraz pracowników korporacji i instytucji. Do każdego spotkania ustalam scenariusz indywidualnie, uwzględniając oczekiwania grupy oraz jej dynamikę.",

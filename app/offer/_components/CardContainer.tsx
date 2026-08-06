@@ -27,6 +27,7 @@ const CardContainer = () => {
                 src={card.image}
                 alt={card.title}
                 fill
+                placeholder="blur"
                 quality={60}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className={`object-cover transition-transform duration-700 ${
@@ -37,9 +38,9 @@ const CardContainer = () => {
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
               <div className="relative sm:mt-14 z-20 text-left">
-                <h3 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
+                <h2 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
                   {card.title}
-                </h3>
+                </h2>
                 <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
                   {card.description}
                 </p>

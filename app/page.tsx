@@ -114,9 +114,9 @@ export default function Home() {
               realnej zmiany, a także na poprawie jakości życia psychicznego.
               Stawiam na głębię spotkania oraz prostotę, skupiając się na
               wymiernych efektach, a także uruchamiając zasoby Klienta oraz jego
-              naturalną odporność psychiczną. Łączę techniki terapii werbalnej z
-              pracą z ciałem, stale pogłębiając wiedzę o funkcjonowaniu
-              człowieka, jego jaźni, psychiki dan ciała.
+              naturalną odporność psychiczną. Łączę techniki terapii werbalnej
+              z&nbsp; pracą z ciałem, stale pogłębiając wiedzę o funkcjonowaniu
+              człowieka, jego jaźni, psychiki i&nbsp;ciała.
             </p>
             <Link
               className="inline-block text-teal-600 border border-teal-600 hover:text-white hover:bg-teal-600 duration-300 px-4 py-2 mt-10 rounded-md text-lg font-jost"

@@ -86,10 +86,10 @@ export default function AboutMe() {
               skupiam się na budowaniu bezpiecznej relacji, która jest nośnikiem
               realnej zmiany, a także na poprawie jakości życia psychicznego.
               Stawiam na głębię spotkania oraz prostotę, skupiając się na
-              wymiernych efektach, a także uruchomiając zasoby Klienta oraz jego
-              naturalną odporność psychiczną. Łączę techniki terapii werbalnej z
-              pracą z ciałem, stale pogłębiając wiedzę o funkcjonowaniu
-              człowieka, jego jaźni, psychiki i ciała.
+              wymiernych efektach, a także uruchamiając zasoby Klienta oraz jego
+              naturalną odporność psychiczną. Łączę techniki terapii werbalnej
+              z&nbsp;pracą z ciałem, stale pogłębiając wiedzę o funkcjonowaniu
+              człowieka, jego jaźni, psychiki i&nbsp;ciała.
             </p>
           </div>
 

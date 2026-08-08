@@ -13,11 +13,15 @@ export const metadata: Metadata = {
     "pomoc psychologiczna online",
     "psycholog online",
   ],
+  alternates: {
+    canonical:
+      "https://miejscespotkanzmiana.pl/offer/konsultacje-psychologiczne",
+  },
   openGraph: {
     title: "Konsultacje psychologiczne | Miejsce spotkań ZMIANA",
     description:
       "Spotkania konsultacyjne ukierunkowane na zrozumienie wyzwań i wypracowanie konkretnego planu działania.",
-    url: "/offer/konsultacje-psychologiczne",
+    url: "https://miejscespotkanzmiana.pl/offer/konsultacje-psychologiczne",
   },
 };
 

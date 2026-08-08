@@ -12,11 +12,14 @@ export const metadata: Metadata = {
     "cennik psychotraumatolog",
     "terapia online cena",
   ],
+  alternates: {
+    canonical: "https://miejscespotkanzmiana.pl/prices",
+  },
   openGraph: {
     title: "Cennik konsultacji i terapii | Miejsce spotkań ZMIANA",
     description:
       "Informacje o cenach i czasie trwania konsultacji psychologicznych, psychotraumatologii i terapii TSR.",
-    url: "/prices",
+    url: "https://miejscespotkanzmiana.pl/prices",
   },
 };
 

@@ -14,11 +14,14 @@ export const metadata: Metadata = {
     "warsztaty i szkolenia",
     "pomoc psychologiczna",
   ],
+  alternates: {
+    canonical: "https://miejscespotkanzmiana.pl/offer",
+  },
   openGraph: {
     title: "Oferta wsparcia psychologicznego | Miejsce spotkań ZMIANA",
     description:
       "Konsultacje psychologiczne, leczenie traumy (psychotraumatologia), terapia TSR oraz dedykowane warsztaty i szkolenia.",
-    url: "/offer",
+    url: "https://miejscespotkanzmiana.pl/offer",
   },
 };
 

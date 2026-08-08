@@ -14,12 +14,15 @@ export const metadata: Metadata = {
     "trauma psychiczna",
     "pomoc po traumie",
   ],
+  alternates: {
+    canonical: "https://miejscespotkanzmiana.pl/offer/psychotraumatologia",
+  },
   openGraph: {
     title:
       "Psychotraumatologia - Leczenie Traumy i PTSD | Miejsce spotkań ZMIANA",
     description:
       "Zrozumienie i pomoc w przetwarzaniu sytuacji traumatycznych. Skuteczne metody pracy ze stresem pourazowym.",
-    url: "/offer/psychotraumatologia",
+    url: "https://miejscespotkanzmiana.pl/offer/psychotraumatologia",
   },
 };
 

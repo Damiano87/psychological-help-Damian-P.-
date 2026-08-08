@@ -13,11 +13,14 @@ export const metadata: Metadata = {
     "odporność psychiczna",
     "resilience",
   ],
+  alternates: {
+    canonical: "https://miejscespotkanzmiana.pl/offer/warsztaty-szkolenia",
+  },
   openGraph: {
     title: "Warsztaty i szkolenia psychologiczne | Miejsce spotkań ZMIANA",
     description:
       "Autorskie warsztaty i szkolenia dostosowane do potrzeb rodziców, opiekunów oraz zespołów firmowych.",
-    url: "/offer/warsztaty-szkolenia",
+    url: "https://miejscespotkanzmiana.pl/offer/warsztaty-szkolenia",
   },
 };
 

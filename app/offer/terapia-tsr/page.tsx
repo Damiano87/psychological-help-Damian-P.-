@@ -13,11 +13,14 @@ export const metadata: Metadata = {
     "terapia krótkoterminowa",
     "wzmocnienie zasobów",
   ],
+  alternates: {
+    canonical: "https://miejscespotkanzmiana.pl/offer/terapia-tsr",
+  },
   openGraph: {
     title: "Terapia TSR | Miejsce spotkań ZMIANA",
     description:
       "Nowoczesna metoda terapeutyczna skoncentrowana na zasobach, mocnych stronach i realnych celach Klienta.",
-    url: "/offer/terapia-tsr",
+    url: "https://miejscespotkanzmiana.pl/offer/terapia-tsr",
   },
 };
 

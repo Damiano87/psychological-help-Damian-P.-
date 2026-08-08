@@ -17,11 +17,15 @@ export const metadata: Metadata = {
     "pomoc psychologiczna Ostrowiec Świętokrzyski",
     "terapia traumy Ostrowiec Świętokrzyski",
   ],
+  alternates: {
+    canonical: "https://miejscespotkanzmiana.pl/contact",
+  },
   openGraph: {
     title: "Kontakt - Damian Piwowarczyk | Miejsce spotkań ZMIANA",
     description:
       "Napisz lub zadzwoń, aby umówić się na konsultację psychologiczną lub zapytać o ofertę.",
-    url: "/contact",
+
+    url: "https://miejscespotkanzmiana.pl/contact",
   },
 };
 

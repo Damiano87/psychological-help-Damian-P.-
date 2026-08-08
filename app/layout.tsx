@@ -56,16 +56,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pl_PL",
     siteName: "Miejsce spotkań ZMIANA - Damian Piwowarczyk",
-    title:
-      "Miejsce spotkań ZMIANA | Damian Piwowarczyk - Psycholog, Psychotraumatolog",
+    title: "Miejsce spotkań ZMIANA | Damian Piwowarczyk - Psycholog",
     description:
-      "Profesjonalna pomoc psychologiczna, psychotraumatologia, terapia TSR oraz warsztaty. Przywracanie równowagi i dobrostanu psychicznego.",
+      "Konsultacje psychologiczne, psychotraumatologia, terapia TSR oraz warsztaty i szkolenia.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Miejsce spotkań ZMIANA | Damian Piwowarczyk",
+    title: "Miejsce spotkań ZMIANA | Damian Piwowarczyk - Psycholog",
     description:
-      "Profesjonalna pomoc psychologiczna, psychotraumatologia i terapia TSR.",
+      "Konsultacje psychologiczne, psychotraumatologia, terapia TSR oraz warsztaty i szkolenia.",
   },
   robots: {
     index: true,

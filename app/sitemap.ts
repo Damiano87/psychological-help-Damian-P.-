@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
-    process.env.NEXT_PUBLIC_URL || "https://miejscespotkanzmiana.pl";
+    process.env.NEXT_PUBLIC_URL || "https://www.miejscespotkanzmiana.pl";
 
   const routes = [
     "",

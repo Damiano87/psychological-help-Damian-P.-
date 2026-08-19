@@ -18,6 +18,7 @@ export default function Home() {
             alt="Psychologiczna pomoc i wsparcie"
             fill
             preload
+            fetchPriority="high"
             placeholder="blur"
             quality={60}
             sizes="100vw"

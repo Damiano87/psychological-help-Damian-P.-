@@ -1,5 +1,5 @@
 import consult from "../public/consultations.webp";
-import trauma from "../public/traumatology.webp";
+import trauma from "../public/trauma.webp";
 import tsr from "../public/tsrtherapy.webp";
 import workshops from "../public/workshops.webp";
 

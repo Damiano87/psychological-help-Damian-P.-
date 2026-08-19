@@ -34,9 +34,9 @@ const AnimatedHeroContent = () => {
       >
         <Link
           href="/offer"
-          className="inline-flex items-center justify-center px-4 py-2 sm:px-8 sm:py-3.5 rounded-full text-xs sm:text-base font-semibold text-white bg-white/10 hover:bg-white/20 active:bg-white/5 border border-white/20 backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-200"
+          className="inline-flex items-center justify-center px-4 py-2 sm:px-8 sm:py-3.5 rounded-full text-[9px] sm:text-base font-semibold text-white bg-white/10 hover:bg-white/20 active:bg-white/5 border border-white/20 backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-200"
         >
-          Dowiedz się więcej
+          psycholog i psychotraumatolog Damian Piwowarczyk
         </Link>
       </motion.div>
     </motion.div>

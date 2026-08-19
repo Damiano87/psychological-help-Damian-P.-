@@ -27,10 +27,10 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_URL || "https://miejscespotkanzmiana.pl",
+    process.env.NEXT_PUBLIC_URL || "https://www.miejscespotkanzmiana.pl",
   ),
   alternates: {
-    canonical: "https://miejscespotkanzmiana.pl",
+    canonical: process.env.NEXT_PUBLIC_URL,
   },
   title: {
     default: "Miejsce spotkań ZMIANA | Damian Piwowarczyk - Psycholog",

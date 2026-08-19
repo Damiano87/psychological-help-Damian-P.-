@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     "ścieżka zawodowa psycholog",
   ],
   alternates: {
-    canonical: "https://miejscespotkanzmiana.pl/aboutme",
+    canonical: `${process.env.NEXT_PUBLIC_URL}/aboutme`,
   },
   openGraph: {
     title: "O mnie - Damian Piwowarczyk | Psycholog i Psychotraumatolog",
     description:
       "Poznaj moje doświadczenie zawodowe, wykształcenie i podejście terapeutyczne w Miejscu spotkań ZMIANA.",
-    url: "https://miejscespotkanzmiana.pl/aboutme",
+    url: `${process.env.NEXT_PUBLIC_URL}/aboutme`,
   },
 };
 

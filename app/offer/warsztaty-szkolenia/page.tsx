@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     "resilience",
   ],
   alternates: {
-    canonical: "https://miejscespotkanzmiana.pl/offer/warsztaty-szkolenia",
+    canonical: `${process.env.NEXT_PUBLIC_URL}/offer/warsztaty-szkolenia`,
   },
   openGraph: {
     title: "Warsztaty i szkolenia psychologiczne | Miejsce spotkań ZMIANA",
     description:
       "Autorskie warsztaty i szkolenia dostosowane do potrzeb rodziców, opiekunów oraz zespołów firmowych.",
-    url: "https://miejscespotkanzmiana.pl/offer/warsztaty-szkolenia",
+    url: `${process.env.NEXT_PUBLIC_URL}/offer/warsztaty-szkolenia`,
   },
 };
 

@@ -6,7 +6,33 @@ import MacbethQuote from "@/components/Quote";
 import AnimatedHeroContent from "@/components/AnimatedHeroContent";
 import UnderlineAnimation from "@/components/UnderlineAnimation";
 
-export default function Home() {
+import { type SanityDocument } from "next-sanity";
+
+import { client } from "@/sanity/client";
+
+const HOMEPAGE_QUERY = `*[_type == "homepage"][0] {
+  _id,
+  _createdAt,
+  title,
+  description,
+  btntext
+}`;
+
+const options = { next: { revalidate: 30 } };
+
+type Homepage = {
+  title: string;
+  description: string;
+  btntext: string;
+};
+
+export default async function Home() {
+  const data = await client.fetch<SanityDocument[] & Homepage>(
+    HOMEPAGE_QUERY,
+    {},
+    options,
+  );
+
   return (
     <div>
       {/* Hero Section */}
@@ -30,7 +56,7 @@ export default function Home() {
         </div>
 
         {/* Hero Content (It's client component) */}
-        <AnimatedHeroContent />
+        <AnimatedHeroContent data={data} />
       </section>
       {/* Offer section */}
       <section className="py-20 md:py-28 transition-colors duration-300 font-jost bg-teal-50">

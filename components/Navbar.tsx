@@ -23,45 +23,17 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-  const [activeHash, setActiveHash] = useState("");
 
-  useEffect(() => {
-    // Set initial hash
-    if (typeof window !== "undefined") {
-      setActiveHash(window.location.hash);
-    }
-
-    const handleHashChange = () => {
-      setActiveHash(window.location.hash);
-    };
-
-    window.addEventListener("hashchange", handleHashChange);
-    window.addEventListener("popstate", handleHashChange);
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-      window.removeEventListener("popstate", handleHashChange);
-    };
-  }, [pathname]);
-
+  // handle link active state
   const isActive = (href: string) => {
-    if (href === "/") {
-      return pathname === "/" && (activeHash === "" || activeHash === "#");
-    }
-    if (href.startsWith("#")) {
-      return activeHash === href;
+    const offer = "/" + pathname.split("/").filter((item) => item !== "")[0];
+    if (offer === href) {
+      return true;
     }
     return pathname === href;
   };
 
-  const handleLinkClick = (href: string) => {
-    if (href.startsWith("#")) {
-      setActiveHash(href);
-    } else {
-      setActiveHash("");
-    }
-    setIsOpen(false);
-  };
-
+  // handle scroll state
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -79,7 +51,7 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 font-jost ${
         isScrolled
-          ? "bg-transparent backdrop-blur-md shadow-sm border-b border-neutral-100/10 dark:border-neutral-800/10"
+          ? "backdrop-blur-md shadow-sm border-b border-neutral-100/10 dark:border-neutral-800/10"
           : "bg-transparent border-b border-transparent"
       }`}
     >
@@ -112,7 +84,6 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  onClick={() => handleLinkClick(link.href)}
                   className={`text-sm uppercase font-medium tracking-wide transition-colors duration-200 ${
                     active
                       ? "text-teal-600 font-semibold"
@@ -188,7 +159,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                onClick={() => handleLinkClick(link.href)}
+                onClick={() => setIsOpen(false)}
                 className={`block px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 ${
                   active
                     ? "text-teal-600 bg-teal-50/50 dark:text-teal-400 dark:bg-teal-950/20 font-semibold"
@@ -199,15 +170,6 @@ export default function Navbar() {
               </Link>
             );
           })}
-          {/* <div className="pt-4 pb-2 px-4">
-            <Link
-              href="#kontakt"
-              onClick={() => setIsOpen(false)}
-              className="block w-full text-center px-5 py-3 rounded-xl text-base font-semibold text-white bg-teal-600 hover:bg-teal-500 active:bg-teal-700 shadow-md shadow-teal-500/10 transition-all duration-200"
-            >
-              Zarezerwuj wizytę
-            </Link>
-          </div> */}
         </div>
       </div>
     </header>

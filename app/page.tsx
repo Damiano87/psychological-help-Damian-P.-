@@ -46,13 +46,13 @@ export default async function Home() {
             preload
             fetchPriority="high"
             placeholder="blur"
-            quality={50}
-            sizes="100vw"
+            quality={15}
+            sizes="(max-width: 768px) 100vw, 1920px"
             style={{
               objectFit: "cover",
             }}
           />
-          <div className="absolute inset-0 bg-neutral-700/40 " />
+          <div className="absolute inset-0 bg-neutral-700/70 " />
         </div>
 
         {/* Hero Content (It's client component) */}
@@ -78,19 +78,19 @@ export default async function Home() {
                       loading="lazy"
                       placeholder="blur"
                       quality={60}
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      sizes="(max-width: 640px) 90vw, (max-width: 1200px) 40vw, 576px"
                       className={`object-cover transition-transform duration-700 ${
                         index === 2
                           ? "scale-150 -translate-y-15 group-hover:scale-[1.7]"
                           : "group-hover:scale-105"
                       }`}
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent z-10" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/65 to-transparent z-10" />
                     <div className="relative sm:mt-14 z-20 text-left">
                       <h2 className="text-xl sm:text-3xl font-bold font-jost text-white mb-2 group-hover:text-teal-300 transition-colors duration-300">
                         {card.title}
                       </h2>
-                      <p className="text-neutral-200 text-xs sm:text-base font-roboto font-light leading-relaxed">
+                      <p className="text-neutral-200 text-xs sm:text-base font-roboto leading-relaxed">
                         {card.description}
                       </p>
                     </div>
@@ -159,7 +159,8 @@ export default async function Home() {
               src={IMAGES.damianHome}
               alt="Zdjęcie Damiana Piwowarczyka"
               fill
-              sizes="(max-width: 640px) 384px, 480px"
+              quality={60}
+              sizes="(max-width: 640px) 100vw, 480px"
               className="object-cover"
             />
           </div>

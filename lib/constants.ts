@@ -4,7 +4,7 @@ import tsr from "../public/tsrtherapy.webp";
 import workshops from "../public/workshops.webp";
 
 export const IMAGES = {
-  homeHero: "/mainbg.webp",
+  homeHero: "/herobg.avif",
   aboutMeHero: "/about.jpg",
   damianHome: "/damian-home.webp",
   damianAboutMe: "/damian-aboutme.webp",

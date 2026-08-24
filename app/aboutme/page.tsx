@@ -42,11 +42,11 @@ export default function AboutMe() {
             alt="Drzewa"
             fill
             preload
-            quality={60}
+            quality={40}
             sizes="100vw"
             className="object-cover object-top"
           />
-          <div className="absolute inset-0 bg-neutral-800/40" />
+          <div className="absolute inset-0 bg-neutral-800/50" />
         </div>
 
         {/* Content (its client component) */}

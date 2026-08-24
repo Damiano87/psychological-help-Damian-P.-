@@ -111,7 +111,7 @@ export default function RootLayout({
       lang="pl"
       className={`${geistSans.variable} ${geistMono.variable} ${jost.variable} ${roboto.variable} h-full antialiased`}
     >
-      <body className="min-h-full">
+      <body className="min-h-full selection:bg-teal-300 selection:text-teal-900">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-F9JZTF0QYL"
           strategy="afterInteractive"

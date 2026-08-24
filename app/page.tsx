@@ -46,7 +46,7 @@ export default async function Home() {
             preload
             fetchPriority="high"
             placeholder="blur"
-            quality={60}
+            quality={50}
             sizes="100vw"
             style={{
               objectFit: "cover",

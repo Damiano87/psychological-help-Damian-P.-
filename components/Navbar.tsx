@@ -22,16 +22,18 @@ const navLinks: NavLink[] = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState("/");
   const pathname = usePathname();
 
-  // handle link active state
-  const isActive = (href: string) => {
-    const offer = "/" + pathname.split("/").filter((item) => item !== "")[0];
-    if (offer === href) {
-      return true;
+  useEffect(() => {
+    const path = "/" + pathname.split("/").filter(Boolean)[0];
+
+    if (pathname === "/") {
+      setActiveLink("/");
+    } else {
+      setActiveLink(path);
     }
-    return pathname === href;
-  };
+  }, [pathname]);
 
   // handle scroll state
   useEffect(() => {
@@ -79,7 +81,7 @@ export default function Navbar() {
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex justify-center items-center gap-8">
             {navLinks.map((link) => {
-              const active = isActive(link.href);
+              const active = link.href === activeLink;
               return (
                 <Link
                   key={link.label}
@@ -154,7 +156,7 @@ export default function Navbar() {
       >
         <div className="px-2 pt-2 pb-6 space-y-1 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border-b border-neutral-100 dark:border-neutral-800 shadow-lg">
           {navLinks.map((link) => {
-            const active = isActive(link.href);
+            const active = link.href === activeLink;
             return (
               <Link
                 key={link.label}

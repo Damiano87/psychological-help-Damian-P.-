@@ -18,6 +18,13 @@ const HOMEPAGE_QUERY = `*[_type == "homepage"][0] {
   btntext
 }`;
 
+const CARDS_QUERY = `*[_type == "homepage"][0] {
+  card1Title, card1Description,
+  card2Title, card2Description,
+  card3Title, card3Description,
+  card4Title, card4Description
+}`;
+
 const options = { next: { revalidate: 30 } };
 
 type Homepage = {
@@ -27,11 +34,21 @@ type Homepage = {
 };
 
 export default async function Home() {
-  const data = await client.fetch<SanityDocument[] & Homepage>(
-    HOMEPAGE_QUERY,
-    {},
-    options,
-  );
+  let data;
+  try {
+    data = await client.fetch<Homepage>(HOMEPAGE_QUERY, {}, options);
+  } catch (error) {
+    console.error("Sanity fetch failed:", error);
+    data = { title: "", description: "", btntext: "" }; // fallback
+  }
+
+  const cardsData = await client.fetch(CARDS_QUERY, {}, options);
+
+  const cards = CARDS.map((card, i) => ({
+    ...card,
+    title: cardsData[`card${i + 1}Title`] ?? card.title,
+    description: cardsData[`card${i + 1}Description`] ?? card.description,
+  }));
 
   return (
     <div>
@@ -63,7 +80,7 @@ export default async function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex flex-wrap justify-center gap-8">
             {/* Cards */}
-            {CARDS?.map((card, index) => {
+            {cards.map((card, index) => {
               return (
                 <Link
                   key={index}

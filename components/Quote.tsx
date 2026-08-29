@@ -14,7 +14,13 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-signature",
 });
 
-export default function MacbethQuote() {
+export default function MacbethQuote({
+  quote,
+  quoteAuthor,
+}: {
+  quote: string;
+  quoteAuthor: string;
+}) {
   return (
     <section
       className={`${ebGaramond.variable} ${cormorant.variable} relative flex items-center justify-center min-h-105 w-full overflow-hidden px-6 py-20`}
@@ -53,8 +59,7 @@ export default function MacbethQuote() {
             color: "#8f867a",
           }}
         >
-          Ubierz żal w słowa; ból, który nie mówi, szepcze do serca i każe mu
-          pęknąć
+          {quote}
         </blockquote>
 
         <div
@@ -69,7 +74,7 @@ export default function MacbethQuote() {
             color: "#a89a86",
           }}
         >
-          „Makbet” — William Shakespeare
+          {quoteAuthor}
         </figcaption>
       </div>
     </section>

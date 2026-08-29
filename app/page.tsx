@@ -15,7 +15,13 @@ const HOMEPAGE_QUERY = `*[_type == "homepage"][0] {
   _createdAt,
   title,
   description,
-  btntext
+  btntext,
+  OwnerName,
+  OwnerBio1,
+  OwnerBio2,
+  btn2Text,
+  quote,
+  quoteAuthor,
 }`;
 
 const CARDS_QUERY = `*[_type == "homepage"][0] {
@@ -31,6 +37,12 @@ type Homepage = {
   title: string;
   description: string;
   btntext: string;
+  OwnerName: string;
+  OwnerBio1: string;
+  OwnerBio2: string;
+  btn2Text: string;
+  quote: string;
+  quoteAuthor: string;
 };
 
 export default async function Home() {
@@ -39,7 +51,17 @@ export default async function Home() {
     data = await client.fetch<Homepage>(HOMEPAGE_QUERY, {}, options);
   } catch (error) {
     console.error("Sanity fetch failed:", error);
-    data = { title: "", description: "", btntext: "" }; // fallback
+    data = {
+      title: "",
+      description: "",
+      btntext: "",
+      OwnerName: "",
+      OwnerBio1: "",
+      OwnerBio2: "",
+      btn2Text: "",
+      quote: "",
+      quoteAuthor: "",
+    }; // fallback
   }
 
   const cardsData = await client.fetch(CARDS_QUERY, {}, options);
@@ -125,7 +147,7 @@ export default async function Home() {
           <div className="flex-1 max-w-xl">
             <div className="inline-block mb-6 relative">
               <h2 className="text-2xl sm:text-3xl font-bold font-roboto">
-                Damian Piwowarczyk
+                {data.OwnerName}
               </h2>
               {/* UnderlineAnimation, (It's client component) */}
               <UnderlineAnimation />
@@ -166,7 +188,7 @@ export default async function Home() {
               className="inline-block text-teal-600 border border-teal-600 hover:text-white hover:bg-teal-600 duration-300 px-4 py-2 mt-10 rounded-md text-lg font-jost"
               href="/aboutme"
             >
-              <span> Więcej... </span>
+              <span> {data.btn2Text} </span>
             </Link>
           </div>
 
@@ -183,7 +205,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <MacbethQuote />
+      <MacbethQuote quote={data.quote} quoteAuthor={data.quoteAuthor} />
     </div>
   );
 }

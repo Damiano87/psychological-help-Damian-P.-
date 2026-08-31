@@ -18,3 +18,7 @@ body {
 .font-roboto {
   font-family: var(--font-roboto), sans-serif;
 }
+
+.first-letter-special {
+  @apply first-letter:float-left first-letter:text-5xl first-letter:leading-none first-letter:pr-3 first-letter:mt-1;
+}

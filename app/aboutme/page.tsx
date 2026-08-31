@@ -6,6 +6,7 @@ import BottomSection from "./_components/BottomSection";
 import { IMAGES } from "@/lib/constants";
 import AnimatedHeroContentAbout from "./_components/AnimatedHeroContentAbout";
 import UnderlineAnimation from "@/components/UnderlineAnimation";
+import { fetchAboutmePageData } from "@/sanity/queries";
 
 export const metadata: Metadata = {
   title: "O mnie - Damian Piwowarczyk",
@@ -30,7 +31,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AboutMe() {
+export default async function AboutMe() {
+  const data = await fetchAboutmePageData();
+
   return (
     <div>
       {/* Hero Section */}
@@ -50,7 +53,7 @@ export default function AboutMe() {
         </div>
 
         {/* Content (its client component) */}
-        <AnimatedHeroContentAbout />
+        <AnimatedHeroContentAbout name={data.title} />
       </section>
       {/* info and image section */}
       <section className="py-16 md:py-24">
@@ -58,41 +61,18 @@ export default function AboutMe() {
           {/* Text content */}
           <div className="flex-1 max-w-xl">
             <div className="inline-block mb-6 relative">
-              <h2 className="text-3xl font-bold font-roboto">O mnie</h2>
+              <h2 className="text-3xl font-bold font-roboto">
+                {data.paragraphTitle}
+              </h2>
               {/* UnderlineAnimation (its client component) */}
               <UnderlineAnimation width="120%" />
             </div>
-            <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
-              <span className="float-left text-5xl leading-none pr-3 mt-1">
-                J
-              </span>
-              estem absolwentem studiów psychologicznych w trybie dziennym na
-              Katolickim Uniwersytecie Lubelskim Jana Pawła II (obrona dyplomu w
-              2011 roku), psychotraumatologiem oraz psychologiem transportu.
-              Jestem w trakcie szkolenia w zakresie Terapii Skoncentrowanej na
-              Rozwiązaniach (TSR). Posiadam wieloletnie doświadczenie
-              psychologiczne w pracy z dziećmi i młodymi dorosłymi, które
-              zdobywałem w poradni psychologiczno-pedagogicznej oraz w szkołach
-              podstawowych i ponadpodstawowych. Od wielu lat pracuję z rodzicami
-              i opiekunami, prowadząc warsztaty oraz indywidualne konsultacje.
-              Cały czas poznaję problemy młodych ludzi, przed którymi świat
-              stawia cały wachlarz wyzwań i presji. Wrażliwość współczesnych
-              nastolatków, ich świadomość siebie i inteligencja emocjonalna
-              sprawiają, że coraz trudniej odnaleźć im satysfakcję i sens oraz
-              otoczyć się zdrowymi, wspierającymi relacjami. Czerpię ogromną
-              radość z budowania odporności psychicznej i spójności w dzieciach,
-              młodzieży oraz dorosłych.
+            <p className="first-letter-special text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
+              {data.paragraph1}
             </p>
             <br />
             <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
-              Pracę psychologa traktuję jako misję. W kontakcie z Klientem
-              skupiam się na budowaniu bezpiecznej relacji, która jest nośnikiem
-              realnej zmiany, a także na poprawie jakości życia psychicznego.
-              Stawiam na głębię spotkania oraz prostotę, skupiając się na
-              wymiernych efektach, a także uruchamiając zasoby Klienta oraz jego
-              naturalną odporność psychiczną. Łączę techniki terapii werbalnej
-              z&nbsp;pracą z ciałem, stale pogłębiając wiedzę o funkcjonowaniu
-              człowieka, jego jaźni, psychiki i&nbsp;ciała.
+              {data.paragraph2}
             </p>
           </div>
 
@@ -114,27 +94,13 @@ export default function AboutMe() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="w-fit relative mb-6">
             <h3 className="font-roboto text-xl sm:text-3xl font-bold">
-              Moja ścieżka zawodowa
+              {data.myProffesionalExperienceTitle}
             </h3>
             {/* UnderlineAnimation (its client component) */}
             <UnderlineAnimation />
           </div>
-          <p className="font-roboto text-sm sm:text-lg leading-relaxed text-neutral-600 mb-6">
-            <span className="float-left text-5xl leading-none pr-3 mt-1">
-              R
-            </span>
-            óżnorodna ścieżka zawodowa to siła i atut, które wplatam do
-            działalności psychologa. Dzięki szerokiemu doświadczeniu zawodowemu
-            potrafię spojrzeć na wyzwania i problemy Klienta z pogłębionej
-            perspektywy. Posiadam wieloletnie doświadczenie korporacyjne,
-            projektowe oraz medialne. Pracowałem także w instytucjach kultury na
-            stanowiskach kierowniczych. Jestem autorem książki poetyckiej
-            „rezyliencje", dofinansowanej przez Ministerstwo Kultury i
-            Dziedzictwa Narodowego, a zainteresowania literackie stanowią
-            integralną część mojego życia, ubogacając mój warsztat psychologa.
-            Publikowałem artykuły i recenzje w „Rzeczpospolitej", „Gazecie
-            Wyborczej", na łamach dwutygodnik.com, w „Piśmie. Magazynie Opinii"
-            oraz w „Przekroju".
+          <p className="first-letter-special font-roboto text-sm sm:text-lg leading-relaxed text-neutral-600 mb-6">
+            {data.myProffesionalExperienceDescription}
           </p>
         </div>
       </section>
@@ -148,7 +114,10 @@ export default function AboutMe() {
         </div>
       </section>
       {/* It's client component */}
-      <BottomSection />
+      <BottomSection
+        myPhilosophyDescription={data.myPhilosophyDescription}
+        myPhilosophyTitle={data.myPhilosophyTitle}
+      />
       {/* Image section */}
       <section className="flex justify-center mx-4 sm:mx-0 mb-8">
         {/* Image container */}

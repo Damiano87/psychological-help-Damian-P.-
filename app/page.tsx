@@ -5,66 +5,11 @@ import homeHero from "@/public/mainbg.webp";
 import MacbethQuote from "@/components/Quote";
 import AnimatedHeroContent from "@/components/AnimatedHeroContent";
 import UnderlineAnimation from "@/components/UnderlineAnimation";
-
-import { type SanityDocument } from "next-sanity";
-
-import { client } from "@/sanity/client";
-
-const HOMEPAGE_QUERY = `*[_type == "homepage"][0] {
-  _id,
-  _createdAt,
-  title,
-  description,
-  btntext,
-  OwnerName,
-  OwnerBio1,
-  OwnerBio2,
-  btn2Text,
-  quote,
-  quoteAuthor,
-}`;
-
-const CARDS_QUERY = `*[_type == "homepage"][0] {
-  card1Title, card1Description,
-  card2Title, card2Description,
-  card3Title, card3Description,
-  card4Title, card4Description
-}`;
-
-const options = { next: { revalidate: 30 } };
-
-type Homepage = {
-  title: string;
-  description: string;
-  btntext: string;
-  OwnerName: string;
-  OwnerBio1: string;
-  OwnerBio2: string;
-  btn2Text: string;
-  quote: string;
-  quoteAuthor: string;
-};
+import { fetchHomepageCardsData, fetchHomepageData } from "@/sanity/queries";
 
 export default async function Home() {
-  let data;
-  try {
-    data = await client.fetch<Homepage>(HOMEPAGE_QUERY, {}, options);
-  } catch (error) {
-    console.error("Sanity fetch failed:", error);
-    data = {
-      title: "",
-      description: "",
-      btntext: "",
-      OwnerName: "",
-      OwnerBio1: "",
-      OwnerBio2: "",
-      btn2Text: "",
-      quote: "",
-      quoteAuthor: "",
-    }; // fallback
-  }
-
-  const cardsData = await client.fetch(CARDS_QUERY, {}, options);
+  const data = await fetchHomepageData();
+  const cardsData = await fetchHomepageCardsData();
 
   const cards = CARDS.map((card, i) => ({
     ...card,
@@ -149,40 +94,15 @@ export default async function Home() {
               <h2 className="text-2xl sm:text-3xl font-bold font-roboto">
                 {data.OwnerName}
               </h2>
-              {/* UnderlineAnimation, (It's client component) */}
+              {/* UnderlineAnimation, (Its client component) */}
               <UnderlineAnimation />
             </div>
-            <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
-              <span className="float-left text-4xl sm:text-5xl leading-none pr-3 mt-1">
-                J
-              </span>
-              estem absolwentem studiów psychologicznych w trybie dziennym na
-              Katolickim Uniwersytecie Lubelskim Jana Pawła II (obrona dyplomu w
-              2011 roku), psychotraumatologiem oraz psychologiem transportu.
-              Jestem w trakcie szkolenia w zakresie Terapii Skoncentrowanej na
-              Rozwiązaniach (TSR). Posiadam wieloletnie doświadczenie
-              psychologiczne w pracy z dziećmi i młodymi dorosłymi, które
-              zdobywałem w poradni psychologiczno-pedagogicznej oraz w szkołach
-              podstawowych i ponadpodstawowych. Od wielu lat pracuję z rodzicami
-              i opiekunami, prowadząc warsztaty oraz indywidualne konsultacje.
-              Cały czas poznaję problemy młodych ludzi, przed którymi świat
-              stawia cały skomplikowany wachlarz wyzwań i presji. Wrażliwość
-              współczesnych nastolatków, ich świadomość siebie i inteligencja
-              emocjonalna sprawiają, że coraz trudniej odnaleźć im satysfakcję i
-              sens oraz otoczyć się zdrowymi, wspierającymi relacjami. Czerpię
-              ogromną radość z budowania odporności psychicznej i spójności w
-              dzieciach, młodzieży oraz dorosłych.
+            <p className="first-letter-special text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
+              {data.OwnerBio1}
             </p>
             <br />
             <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
-              Pracę psychologa traktuję jako misję. W kontakcie z Klientem
-              skupiam się na budowaniu bezpiecznej relacji, która jest nośnikiem
-              realnej zmiany, a także na poprawie jakości życia psychicznego.
-              Stawiam na głębię spotkania oraz prostotę, skupiając się na
-              wymiernych efektach, a także uruchamiając zasoby Klienta oraz jego
-              naturalną odporność psychiczną. Łączę techniki terapii werbalnej
-              z&nbsp; pracą z ciałem, stale pogłębiając wiedzę o funkcjonowaniu
-              człowieka, jego jaźni, psychiki i&nbsp;ciała.
+              {data.OwnerBio2}
             </p>
             <Link
               className="inline-block text-teal-600 border border-teal-600 hover:text-white hover:bg-teal-600 duration-300 px-4 py-2 mt-10 rounded-md text-lg font-jost"

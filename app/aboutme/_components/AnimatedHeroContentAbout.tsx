@@ -3,7 +3,7 @@
 import { containerVariants, itemVariants } from "@/lib/constants";
 import { motion } from "framer-motion";
 
-const AnimatedHeroContentAbout = () => {
+const AnimatedHeroContentAbout = ({ name }: { name: string }) => {
   return (
     <motion.div
       variants={containerVariants}
@@ -15,7 +15,7 @@ const AnimatedHeroContentAbout = () => {
         variants={itemVariants}
         className="text-5xl sm:text-7xl font-bold tracking-tight text-white mb-6 drop-shadow-sm leading-tight font-jost"
       >
-        Damian Piwowarczyk
+        {name}
       </motion.h1>
     </motion.div>
   );

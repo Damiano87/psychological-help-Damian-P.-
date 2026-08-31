@@ -2,15 +2,6 @@
 
 import { motion, Variants } from "framer-motion";
 
-const words = [
-  "Moja",
-  "filozofia",
-  "działania,",
-  "inspiracje",
-  "oraz",
-  "wartości",
-];
-
 const container = {
   hidden: {},
   visible: {
@@ -29,7 +20,15 @@ const wordVariant: Variants = {
   },
 };
 
-const BottomSection = () => {
+const BottomSection = ({
+  myPhilosophyDescription,
+  myPhilosophyTitle,
+}: {
+  myPhilosophyDescription: string;
+  myPhilosophyTitle: string;
+}) => {
+  const words = myPhilosophyTitle.split(" ");
+
   return (
     <section className="py-16 md:py-24 font-roboto">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-neutral-600">
@@ -49,16 +48,7 @@ const BottomSection = () => {
           </motion.span>
         </h3>
         <p className="text-sm md:text-lg leading-relaxed text-neutral-600 mb-4">
-          W swojej filozofii pracy czerpię inspirację od największych myślicieli
-          i reformatorów psychologii oraz psychoanalizy. Na moje podejście
-          wpływają szczególnie poglądy Carla Rogersa, Rollo Maya, Viktora
-          Frankla oraz Alexandra Lowena na temat istnienia człowieka, jego
-          naturalnej tendencji do spójności i koherencji, oraz przekonanie o
-          wyjątkowości każdej osoby. Stawiam na budowanie autentycznej relacji
-          terapeutycznej z Klientem, ponieważ to ona, staje się wehikułem
-          zmiany. Liczy się dla mnie realny i autentyczny wpływ na życie
-          Klienta, poparty sprawdzonymi technikami i narzędziami
-          terapeutycznymi.
+          {myPhilosophyDescription}
         </p>
       </div>
     </section>

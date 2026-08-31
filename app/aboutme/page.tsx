@@ -7,6 +7,7 @@ import { IMAGES } from "@/lib/constants";
 import AnimatedHeroContentAbout from "./_components/AnimatedHeroContentAbout";
 import UnderlineAnimation from "@/components/UnderlineAnimation";
 import { fetchAboutmePageData } from "@/sanity/queries";
+import PortableTextComponent from "@/components/PortableText";
 
 export const metadata: Metadata = {
   title: "O mnie - Damian Piwowarczyk",
@@ -67,13 +68,7 @@ export default async function AboutMe() {
               {/* UnderlineAnimation (its client component) */}
               <UnderlineAnimation width="120%" />
             </div>
-            <p className="first-letter-special text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
-              {data.paragraph1}
-            </p>
-            <br />
-            <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
-              {data.paragraph2}
-            </p>
+            <PortableTextComponent value={data.paragraph} />
           </div>
 
           {/* Image container */}
@@ -108,9 +103,15 @@ export default async function AboutMe() {
       <section className="py-16 md:py-24 bg-teal-100 font-roboto">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 items-start gap-12 md:gap-16">
           {/* Column 1 - Filar psychologiczny */}
-          <LeftCard />
+          <LeftCard
+            title={data.leftCardTitle}
+            description={data.leftCardDescription}
+          />
           {/* Column 2 - Filar zawodowy */}
-          <RightCard />
+          <RightCard
+            title={data.rightCardTitle}
+            description={data.rightCardDescription}
+          />
         </div>
       </section>
       {/* It's client component */}

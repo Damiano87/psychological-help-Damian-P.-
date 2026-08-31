@@ -1,14 +1,23 @@
 "use client";
 
+import PortableTextComponent from "@/components/PortableText";
+import { PortableTextBlock } from "next-sanity";
 import { useState } from "react";
+import { getPlainTextExcerpt } from "../utils";
 
-export default function PsychologicalPillar() {
+export default function PsychologicalPillar({
+  title,
+  description,
+}: {
+  title: string;
+  description: PortableTextBlock[];
+}) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className="bg-linear-to-br from-teal-100 via-teal-200 to-teal-600 border border-neutral-400 rounded-lg p-6 shadow-lg">
       <h3 className="text-xl sm:text-3xl font-bold mb-12 tracking-wide">
-        Filar zawodowy
+        {title}
       </h3>
 
       <div
@@ -18,36 +27,17 @@ export default function PsychologicalPillar() {
         }}
       >
         <div className="overflow-hidden">
-          <p className="text-md md:text-lg leading-relaxed text-neutral-600">
-            Posiadam wieloletnie doświadczenie w pracy z ludźmi. Podczas pracy w
-            szkołach podstawowych oraz ponadpodstawowych przez ostatnie lata
-            towarzyszyłem podopiecznym w szeregu wyzwań, między innymi:
-            zaburzeniami osobowości, depresją, pustką egzystencjalną, niską
-            samooceną, przemocą rówieśniczą i uzależnieniami. W kontakcie z
-            dziećmi i młodzieżą zachowuję postawę proaktywną, działam w grupie
-            na zasadach warsztatowych oraz pracuję w klasach pod kątem
-            psychoedukacji i psychoprofilaktyki. W pracy projektowej i
-            korporacyjnej, w międzynarodowym środowisku, rozwijałem swoje
-            kompetencje menedżerskie i interpersonalne. Doświadczenie w
-            zarządzaniu zespołem zdobywałem także w mediach i instytucjach
-            kultury. Od lat jestem związany zawodowo z literaturą – jestem
-            autorem tomiku wierszy dofinansowanego przez Ministerstwo Kultury i
-            Dziedzictwa Narodowego. Aktualnie pracuję nad nową książką poetycką,
-            a dodatkowo piszę recenzje poezji współczesnej dla czołowych
-            polskich mediów. Brałem udział jako ekspert w podcastach, panelach
-            oraz programach telewizyjnych.
-          </p>
+          <PortableTextComponent
+            value={description}
+            firstLetterSpecial={false}
+          />
         </div>
       </div>
 
       {/* Always seen */}
       {!isExpanded && (
         <p className="text-md md:text-lg leading-relaxed text-neutral-600 line-clamp-7 -mt-7">
-          Posiadam wieloletnie doświadczenie w pracy z ludźmi. Podczas pracy w
-          szkołach podstawowych oraz ponadpodstawowych przez ostatnie lata
-          towarzyszyłem podopiecznym w szeregu wyzwań, między innymi:
-          zaburzeniami osobowości, depresją, pustką egzystencjalną, niską
-          samooceną, przemocą rówieśniczą i uzależnieniami.
+          {getPlainTextExcerpt(description, 280)}
         </p>
       )}
 

@@ -6,6 +6,8 @@ import MacbethQuote from "@/components/Quote";
 import AnimatedHeroContent from "@/components/AnimatedHeroContent";
 import UnderlineAnimation from "@/components/UnderlineAnimation";
 import { fetchHomepageCardsData, fetchHomepageData } from "@/sanity/queries";
+import { PortableText } from "next-sanity";
+import PortableTextComponent from "@/components/PortableText";
 
 export default async function Home() {
   const data = await fetchHomepageData();
@@ -97,13 +99,8 @@ export default async function Home() {
               {/* UnderlineAnimation, (Its client component) */}
               <UnderlineAnimation />
             </div>
-            <p className="first-letter-special text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
-              {data.OwnerBio1}
-            </p>
-            <br />
-            <p className="text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto">
-              {data.OwnerBio2}
-            </p>
+
+            <PortableTextComponent value={data.OwnerBio1} />
             <Link
               className="inline-block text-teal-600 border border-teal-600 hover:text-white hover:bg-teal-600 duration-300 px-4 py-2 mt-10 rounded-md text-lg font-jost"
               href="/aboutme"

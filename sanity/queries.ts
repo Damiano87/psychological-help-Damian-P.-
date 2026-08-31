@@ -1,4 +1,5 @@
 import { client } from "@/sanity/client";
+import type { PortableTextBlock } from "next-sanity";
 
 const options = { next: { revalidate: 30 } };
 
@@ -11,7 +12,6 @@ const HOMEPAGE_QUERY = `*[_type == "homepage"][0] {
   btntext,
   OwnerName,
   OwnerBio1,
-  OwnerBio2,
   btn2Text,
   quote,
   quoteAuthor,
@@ -29,8 +29,7 @@ type Homepage = {
   description: string;
   btntext: string;
   OwnerName: string;
-  OwnerBio1: string;
-  OwnerBio2: string;
+  OwnerBio1: PortableTextBlock[];
   btn2Text: string;
   quote: string;
   quoteAuthor: string;
@@ -47,8 +46,7 @@ export const fetchHomepageData = async () => {
       description: "",
       btntext: "",
       OwnerName: "",
-      OwnerBio1: "",
-      OwnerBio2: "",
+      OwnerBio1: [],
       btn2Text: "",
       quote: "",
       quoteAuthor: "",
@@ -84,10 +82,13 @@ const ABOUTMEPAGE_QUERY = `*[_type == "aboutpage"][0] {
   _createdAt,
   title,
   paragraphTitle,
-  paragraph1,
-  paragraph2,
+  paragraph,
   myProffesionalExperienceTitle,
   myProffesionalExperienceDescription,
+  leftCardTitle,
+  leftCardDescription,
+  rightCardTitle,
+  rightCardDescription,
   myPhilosophyTitle,
   myPhilosophyDescription,
 }`;
@@ -95,10 +96,13 @@ const ABOUTMEPAGE_QUERY = `*[_type == "aboutpage"][0] {
 type Aboutmepage = {
   title: string;
   paragraphTitle: string;
-  paragraph1: string;
-  paragraph2: string;
+  paragraph: PortableTextBlock[];
   myProffesionalExperienceTitle: string;
   myProffesionalExperienceDescription: string;
+  leftCardTitle: string;
+  leftCardDescription: PortableTextBlock[];
+  rightCardTitle: string;
+  rightCardDescription: PortableTextBlock[];
   myPhilosophyTitle: string;
   myPhilosophyDescription: string;
 };
@@ -112,10 +116,13 @@ export const fetchAboutmePageData = async () => {
     data = {
       title: "",
       paragraphTitle: "",
-      paragraph1: "",
-      paragraph2: "",
+      paragraph: [],
       myProffesionalExperienceTitle: "",
       myProffesionalExperienceDescription: "",
+      leftCardTitle: "",
+      leftCardDescription: [],
+      rightCardTitle: "",
+      rightCardDescription: [],
       myPhilosophyTitle: "",
       myPhilosophyDescription: "",
     }; // fallback

@@ -30,8 +30,8 @@ function ContactHeader() {
 
 function ContactCard({ icon: Icon, title, description }: ContactCardProps) {
   return (
-    <div className="flex md:basis-74 items-center gap-4 bg-white rounded-2xl border border-neutral-100 shadow-md p-5">
-      <span className="shrink-0 w-11 h-11 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center">
+    <div className="flex md:basis-80 items-center gap-4 bg-white rounded-2xl border border-neutral-100 shadow-md p-5">
+      <span className="shrink-0 w-11 h-11 rounded-full bg-teal-100 text-teal-400 flex items-center justify-center">
         <Icon className="w-5 h-5" />
       </span>
       <div>

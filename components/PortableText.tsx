@@ -22,7 +22,7 @@ const PortableTextComponent = ({
           return (
             <p
               className={cn(
-                `text-sm sm:text-lg leading-relaxed text-neutral-600 font-roboto ${
+                `text-md md:text-lg leading-relaxed text-neutral-600 font-roboto ${
                   index === 0 && firstLetterSpecial
                     ? "first-letter-special"
                     : ""

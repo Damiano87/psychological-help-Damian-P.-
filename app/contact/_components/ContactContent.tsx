@@ -80,7 +80,7 @@ const ContactContent = () => {
           <ContactCard
             icon={AddressIcon}
             title="Adres"
-            description={`Ostrowiec Świętokrzyski, \nul. Sandomierska 26A, \nIII piętro pok. 3.29`}
+            description={`Ostrowiec Świętokrzyski, \nul. Sandomierska 26A, \nIII piętro pok. 329`}
           />
         </motion.div>
 
